@@ -17,6 +17,7 @@
     },
     "dependencies": {
         "@inertiajs/vue3": "^1.2.0",
-        "dayjs": "^1.11.13"
+        "dayjs": "^1.11.13",
+        "vue3-carousel": "^0.8.1"
     }
 }

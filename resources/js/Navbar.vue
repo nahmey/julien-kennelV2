@@ -12,30 +12,36 @@
 		<nav class="site-nav">
 			<div class="container">
 				<div class="site-navigation">
-					<a href="index.html" class="logo m-0">Julien Kennel <span class="text-primary">.</span></a>
+					<Link :href="route('accueil')" class="logo m-0">
+						<img :src="base_url + '/images/logo/logo_jk_v1.png'" class="col-1" /> Julien Kennel
+					</Link>
 
 					<ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
-						<li class="active"><a href="index.html">Accueil</a></li>
-						<li><a href="services.html">Réalisations</a></li>
-						<li><a href="about.html">Technologies</a></li>
-						<li><a href="contact.html">A propos</a></li>
-						<li><a href="contact.html">Contact</a></li>
-<!-- 						<li class="has-children">
-							<a href="#">Dropdown</a>
-							<ul class="dropdown">
-								<li><a href="elements.html">Elements</a></li>
-								<li><a href="#">Menu One</a></li>
-								<li class="has-children">
-									<a href="#">Menu Two</a>
-									<ul class="dropdown">
-										<li><a href="#">Sub Menu One</a></li>
-										<li><a href="#">Sub Menu Two</a></li>
-										<li><a href="#">Sub Menu Three</a></li>
-									</ul>
-								</li>
-								<li><a href="#">Menu Three</a></li>
-							</ul>
-						</li> -->
+						<li :class="[(active_route === 'accueil' ? active_route_class : '')]">
+							<Link :href="route('accueil')">
+								Accueil
+							</Link>
+						</li>
+						<li :class="[(active_route === 'realisations' ? active_route_class : '')]">
+							<Link :href="route('realisations')">
+								Réalisations
+							</Link>
+						</li>
+						<li :class="[(active_route === 'technologies' ? active_route_class : '')]">
+							<Link :href="route('technologies')">
+								Technologies
+							</Link>
+						</li>
+						<li>
+							<Link :href="route('apropos')">
+								A propos
+							</Link>
+						</li>
+						<li>
+							<Link :href="route('accueil')">
+								Contact
+							</Link>
+						</li>
 					</ul>
 
 					<a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
@@ -47,3 +53,32 @@
 		</nav>
 	</div>
 </template>
+
+<script setup>
+import { Link, usePage, router } from '@inertiajs/vue3';
+import { watch, inject, ref } from 'vue';
+
+const page = usePage()
+const base_url = inject('base_url');
+const active_route = route().current() ? ref(route().current()) : ref('accueil');
+const active_route_class = 'active';
+
+/*
+ * Watch 
+ */
+router.on('finish', (event) => {
+    active_route.value = route().current()
+})
+
+// const hideMenu = () => 
+// {
+//     let menu = document.getElementById('navbarToggleExternalContent');
+//     menu.classList.remove('show');
+// }
+
+// const redirectToHome = () =>
+// {
+//     router.visit(route('programme'))
+// }
+
+</script>
