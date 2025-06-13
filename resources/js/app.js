@@ -3,7 +3,7 @@ import './bootstrap';
 // import 'bootstrap';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import '../css/custom.css';
-// import '../css/style.css';
+import '../css/style.css';
 
 import { createApp, h } from 'vue';
 import { createInertiaApp, Link } from '@inertiajs/vue3';

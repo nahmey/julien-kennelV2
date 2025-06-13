@@ -31,7 +31,7 @@
 						</div>
 					</div>
 
-					<div class="col-12 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-3" >
+					<div class="col-12 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-3 mt-4 mt-md-0" >
 						<div class="feature-1 d-md-flex" v-for="service in services_col_2">
 							<div class="align-self-center">
 								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" :class="service.icone + ' lucide mb-4'"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
@@ -137,7 +137,20 @@
 				</div>
 			</div>
 <!-- :autoplay="2000" -->
-			<carousel :items-to-show="3" :wrap-around="true"  :transition="1500" :autoplay="10000">
+			<carousel 
+			:breakpoints="{
+				700: {
+					itemsToShow: 1,
+					snapAlign: 'center',
+				},
+				1000: {
+					itemsToShow: 3,
+					snapAlign: 'start',
+				}
+			}"
+		    :wrap-around="true"  
+		    :transition="1500"
+		    :autoplay="10000">
 				<slide v-for="site in carousel_sites" :key="site.id">
 					<div class="item">
 						<a class="media-thumb m-1" :href="base_url + '/images/hero-slider-2.jpg'" data-fancybox="gallery">

@@ -7,7 +7,7 @@
         <meta name="description" content="C.V Julien Kennel, développeur d'applications et de sites web, région de Saverne et Strasbourg dans le bas-rhin.">
         <meta name="author" content="Julien Kennel">
         <link rel="shortcut icon" type="image/png" href="{{asset('images/ico.png')}}"/>
-        <meta name="keywords" content="développeur web, sites internet, applications, logiciels métiers, Saverne, Strasbourg, Bas-Rhin" />
+        <meta name="keywords" content="Développeur web, sites internet, applications, logiciels métiers, Saverne, Strasbourg, Bas-Rhin" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

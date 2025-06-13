@@ -5,8 +5,8 @@
 				<div class="row">
 					<div class="col-md-6 col-lg-4">
 						<div class="widget">
-							<h3 class="heading">About Tour</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+							<h3 class="heading">Julien Kennel</h3>
+							<p>Spécialisé en Laravel, Vue.js et PostgreSQL. Je développe des solutions web robustes, performantes et évolutives, avec une attention particulière à la simplicité d’usage et à l’accompagnement client.</p>
 						</div>
 						<div class="widget">
 							<ul class="list-unstyled social">
@@ -24,8 +24,10 @@
 						<div class="widget">
 							<h3 class="heading">Pages</h3>
 							<ul class="links list-unstyled">
-								<li><a href="#">Blog</a></li>
-								<li><a href="#">About</a></li>
+								<li><Link :href="route('accueil')">Accueil</Link></li>
+								<li><Link :href="route('realisations')">Réalisations</Link></li>
+								<li><Link :href="route('technologies')">Technologies</Link></li>
+								<li><Link :href="route('a-propos')">À propos</Link></li>
 								<li><a href="#">Contact</a></li>
 							</ul>
 						</div>
@@ -60,7 +62,10 @@
 			<div class="container">
 				<div class="row text-center">
 					<div class="col-md-8 mb-3 mb-md-0 mx-auto">
-						<p>Copyright © {{dayjs().format('YYYY')}}. Tous droits réservés. - <Link :href="route('mentions_legales')" class="link-highlight text_white">Mentions légales</Link>
+						<p>Copyright © {{dayjs().format('YYYY')}}. Tous droits réservés. - 
+							<Link :href="route('mentions_legales')" class="link-highlight text-white">
+								Mentions légales
+							</Link>
 						</p>
 						<!-- <p>Copyright ©<script>document.write(new Date().getFullYear());</script>2025. All Rights Reserved. — Designed with love by <a href="https://untree.co" class="link-highlight">Untree.co</a>Distributed By <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
 						</p> -->
@@ -74,4 +79,5 @@
 
 <script setup>
 import dayjs from 'dayjs';
+import { Link, usePage, router } from '@inertiajs/vue3';
 </script>

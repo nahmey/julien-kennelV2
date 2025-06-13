@@ -35,9 +35,9 @@
 					est hébergé chez OVH SAS au capital de 10 069 020 € <br> RCS Lille Métropole 424 761 419 00045<br> Code APE 2620Z<br> N° TVA : FR 22 424 761 419<br> Siège social : 2 rue Kellermann - 59100 Roubaix - France<br>
 				</p>
 
-				<h2 class="h4 mt-6">Crédits photos </h2>
+<!-- 				<h2 class="h4 mt-6">Crédits photos </h2>
 
-				<p> A MODIFIER Mathieu de MIJOLLA&nbsp;(Conservatoire d’Espaces Naturels d’Alsace), Rita GRIES, Marie KNOCHEL, Vincent MUNIER, Emmanuelle PATTE, Jean-Christophe RAGUÉ, David DEMERGÈS (Conservatoire d’Espaces Naturels de Lorraine) </p>
+				<p> A MODIFIER Mathieu de MIJOLLA&nbsp;(Conservatoire d’Espaces Naturels d’Alsace), Rita GRIES, Marie KNOCHEL, Vincent MUNIER, Emmanuelle PATTE, Jean-Christophe RAGUÉ, David DEMERGÈS (Conservatoire d’Espaces Naturels de Lorraine) </p> -->
 
 				<h2 class="h4 mt-6">Propriété intellectuelle et contrefaçons </h2>
 
