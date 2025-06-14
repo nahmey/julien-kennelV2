@@ -31,13 +31,18 @@
 								Technologies
 							</Link>
 						</li>
-						<li>
+						<li :class="[(active_route === 'tarifs' ? active_route_class : '')]">
+							<Link :href="route('tarifs')">
+								Tarifs
+							</Link>
+						</li>
+						<li :class="[(active_route === 'a-propos' ? active_route_class : '')]">
 							<Link :href="route('a-propos')">
 								A propos
 							</Link>
 						</li>
-						<li>
-							<Link :href="route('accueil')">
+						<li :class="[(active_route === 'contacts' ? active_route_class : '')]">
+							<Link :href="route('contacts')">
 								Contact
 							</Link>
 						</li>
@@ -78,6 +83,7 @@ onUnmounted(() => {
  */
 router.on('finish', (event) => {
     active_route.value = route().current()
+    console.log(active_route.value)
 })
 
 </script>

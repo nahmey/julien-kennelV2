@@ -1,6 +1,8 @@
 <template>
 	<div>
-		<div class="hero hero-inner">
+		<Head title="Technologies – Julien Kennel, développeur web freelance" />
+
+		<div class="hero hero-inner" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/computer_3_bis.jpg') no-repeat center / cover fixed;">
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-lg-6 mx-auto text-center">
@@ -19,7 +21,7 @@
 			<div class="container">
 				<h2 class="mb-5">Frameworks</h2>
 				<div class="d-flex flex-wrap justify-content-between">
-					<div class="col-6 col-md-6 col-lg-3 p-0" v-for="data in frameworks">
+					<div class="col-12 col-md-6 col-lg-3 p-0" v-for="data in frameworks">
 						<div class="media-1 h-100 d-flex flex-column justify-content-between">
 							<a href="#" class="d-block mb-3">
 								<img :src="base_url + data.src" alt="Image" class="img-fluid">
@@ -40,7 +42,7 @@
 			<div class="container mt-5 pt-4 pb-4 text-white">
 				<h2 class="mb-5">Langages de programmation</h2>
 				<div class="d-flex flex-wrap justify-content-between">
-					<div class="card-body col-6 col-md-6 col-lg-3" v-for="data in langages">
+					<div class="card-body col-12 col-md-6 col-lg-3" v-for="data in langages">
 						<div class="media-2 h-100 d-flex flex-column justify-content-between">
 							<a href="#" class="d-block mb-3 mt-auto">
 								<img :src="base_url + data.src" alt="Image" class="img-fluid">
@@ -61,7 +63,7 @@
 			<div class="container mt-5">
 				<h2 class="mb-5">Base de données</h2>
 				<div class="d-flex flex-wrap">
-					<div class="col-6 col-md-6 col-lg-3" v-for="data in bdds">
+					<div class="col-12 col-md-6 col-lg-3" v-for="data in bdds">
 						<div class="media-1 h-100 d-flex flex-column justify-content-between">
 							<a href="#" class="d-block mb-3">
 								<img :src="base_url + data.src" alt="Image" class="img-fluid">
@@ -78,11 +80,11 @@
 			</div>
 		</div>
 
-		<div class="cta-section pt-4 pb-4 text-white">
+		<div class="cta-section bg-light pt-4 pb-4">
 			<div class="container mt-5">
 				<h2 class="mb-5">Autres</h2>
 				<div class="row">
-					<div class="col-6 col-md-6 col-lg-3" v-for="data in cms">
+					<div class="col-12 col-md-6 col-lg-3" v-for="data in cms">
 						<div class="media-1">
 							<a href="#" class="d-block mb-3">
 								<img :src="base_url + data.src" alt="Image" class="img-fluid">
@@ -140,6 +142,7 @@
 
 <script setup>
 import { ref, inject } from 'vue';
+import { Head, Link } from '@inertiajs/vue3';
 
 const base_url = inject('base_url');
 

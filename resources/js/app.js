@@ -13,7 +13,7 @@ import { ZiggyVue } from '../../vendor/tightenco/ziggy';
 import Layout from '@/Layout.vue';
 // import helpers from '@/helpers';
 
-const appName = import.meta.env.VITE_APP_NAME_ODONAT_REQUETEUR || 'Laravel';
+const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 const base_url = import.meta.env.VITE_BASE_URL;
 
 createInertiaApp({
@@ -23,7 +23,8 @@ createInertiaApp({
     	page.default.layout = page.default.layout || Layout
     	return page
   	},
-  	title: (title) => `${title} - ${appName}`,
+  	// title: (title) => `${title} - ${appName}`,
+  	title: (title) => `${title}`,
   	setup({ el, App, props, plugin }) {
     	createApp({ render: () => h(App, props) })
       	.use(plugin)

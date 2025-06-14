@@ -4,10 +4,12 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="C.V Julien Kennel, développeur d'applications et de sites web, région de Saverne et Strasbourg dans le bas-rhin.">
         <meta name="author" content="Julien Kennel">
         <link rel="shortcut icon" type="image/png" href="{{asset('images/ico.png')}}"/>
-        <meta name="keywords" content="Développeur web, sites internet, applications, logiciels métiers, Saverne, Strasbourg, Bas-Rhin" />
+
+        <meta name="description" content="Julien Kennel, développeur web à Saverne dans le Bas-Rhin, création de sites internet et d'applications métiers sur mesure, modernes et performants.">
+
+        <meta name="keywords" content="Julien Kennel, développeur web, création de site internet, développement d'applications métiers, logiciels sur mesure, applications web, Saverne, Strasbourg, Bas-Rhin" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

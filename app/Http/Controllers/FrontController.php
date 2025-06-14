@@ -31,6 +31,16 @@ class FrontController extends Controller
         return Inertia::render('Apropos');
     }
 
+    public function tarifs()
+    {
+        return Inertia::render('Tarifs');
+    }
+
+    public function contacts()
+    {
+        return Inertia::render('Contacts');
+    }
+
     public function getAvisGoogle()
     {
         return $avis = [

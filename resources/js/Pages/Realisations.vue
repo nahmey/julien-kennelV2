@@ -1,5 +1,7 @@
 <template>
 	<div>
+		<Head title="Réalisations – Sites web et applications | Julien Kennel" />
+
 		<div class="hero hero-inner" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/computer_11.jpg') no-repeat center / cover fixed;">
 			<div class="container">
 				<div class="row align-items-center">
@@ -71,3 +73,7 @@
 		</div>
 	</div>
 </template>
+
+<script setup>
+import { Head, Link } from '@inertiajs/vue3';
+</script>

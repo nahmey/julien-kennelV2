@@ -56,6 +56,14 @@ a.text-primary {
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   font-family: "Source Serif Pro", serif; }
 
+.bg-vert{
+  background-color: #99D98F !important;
+}
+
+.pagintation-realisations .carousel__pagination-button:not(.carousel__pagination-button--active)::after {
+  background-color: white !important;
+}
+
 .btn {
   padding-top: 12px;
   padding-bottom: 12px;

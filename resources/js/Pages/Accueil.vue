@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<Head title="Julien Kennel – Développeur web à Saverne (Bas-Rhin)" />
 
 		<TypingEffect :base_url="base_url" />
 
@@ -166,7 +167,7 @@
 				<template #addons>
 					<navigation />
 					<div class="pt-50px">
-						<pagination />
+						<pagination class="pagintation-realisations" />
 					</div>
 				</template>
 			 </carousel>
@@ -290,12 +291,12 @@
 
 <script setup>
 import { ref, inject, onMounted } from 'vue';
+import { Head, Link } from '@inertiajs/vue3';
 
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 
 import TypingEffect from '@/Components/TypingEffect.vue';
-import Test from '@/Pages/Test.vue';
 
 const base_url = inject('base_url');
 const carousel_sites = ref([]);

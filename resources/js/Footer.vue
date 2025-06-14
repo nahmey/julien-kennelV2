@@ -13,23 +13,36 @@
 								<!-- <li><a href="#"><span class="icon-twitter"></span></a></li> -->
 								<!-- <li><a href="#"><span class="icon-instagram"></span></a></li> -->
 								<!-- <li><a href="#"><span class="icon-facebook"></span></a></li> -->
-								<li><a href="#" class="mr-2"><span class="icon-linkedin"></span></a></li>
+								<li>
+									<a href="https://www.linkedin.com/in/julien-kennel-814886160/" target="_blank" class="mr-2">
+										<span class="icon-linkedin"></span>
+									</a>
+								</li>
 								<!-- <li><a href="#"><span class="icon-dribbble"></span></a></li> -->
 								<!-- <li><a href="#"><span class="icon-pinterest"></span></a></li> -->
-								<li><a href="#"><span class="icon-github"></span></a></li>
+								<li>
+									<a href="https://github.com/nahmey" target="_blank">
+										<span class="icon-github"></span>
+									</a>
+								</li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-md-6 col-lg-4 pl-lg-5">
 						<div class="widget">
 							<h3 class="heading">Pages</h3>
-							<ul class="links list-unstyled">
-								<li><Link :href="route('accueil')">Accueil</Link></li>
-								<li><Link :href="route('realisations')">Réalisations</Link></li>
-								<li><Link :href="route('technologies')">Technologies</Link></li>
-								<li><Link :href="route('a-propos')">À propos</Link></li>
-								<li><a href="#">Contact</a></li>
-							</ul>
+							<div class="d-flex flex-wrap">
+								<ul class="links list-unstyled">
+									<li class="pr-0 pr-md-4"><Link :href="route('accueil')">Accueil</Link></li>
+									<li class="pr-0 pr-md-4"><Link :href="route('realisations')">Réalisations</Link></li>
+									<li class="pr-0 pr-md-4"><Link :href="route('technologies')">Technologies</Link></li>
+								</ul>
+								<ul class="links list-unstyled">
+									<li><Link :href="route('tarifs')">Tarifs</Link></li>
+									<li><Link :href="route('a-propos')">À propos</Link></li>
+									<li><Link :href="route('contacts')">Contact</Link></li>
+								</ul>
+							</div>
 						</div>
 					</div>
 <!-- 					<div class="col-md-6 col-lg-2">
