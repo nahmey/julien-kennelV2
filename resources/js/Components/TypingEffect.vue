@@ -5,7 +5,7 @@
 			<div class="row align-items-center">
 				<div class="col-lg-7">
 					<div class="intro-wrap">
-						<h1 class="mb-5">
+						<h1 class="mb-5 mt-5">
 							<span class="d-block">Développeur <span class="text-vert-fonce">Web</span> spécialisé dans la création</span>
 							<span class="typed-words text-vert-fonce">
 								<span class="fixed-d ">D</span>{{ displayedText }}
@@ -13,7 +13,7 @@
 						</h1>
 					</div>
 				</div>
-				<div class="col-lg-5 d-none d-sm-block">
+<!-- 				<div class="col-lg-5 d-none d-sm-block">
 					<div class="slides">
 						<img 
 						v-for="(image, index) in images" 
@@ -23,7 +23,7 @@
 						:class="['img-fluid', { active: currentWordIndex === index }]"
 						/>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>

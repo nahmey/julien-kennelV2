@@ -14,22 +14,40 @@
 						</div>
 					</div>
 				</div>
+
+				<Tabs :tabs="myTabs" default-tab="tous">
+					<template #tous>
+						<h2 class="mb-4 text-white">Toutes mes réalisations</h2>
+						<RealisationSites :chunkedSites="chunkedSites" />
+						<RealisationApplications :chunkedApps="chunkedApps"/>
+					</template>
+					<template #site_web>
+						<h2 class="mb-4 text-white">Sites web</h2>
+						<RealisationSites :chunkedSites="chunkedSites" />
+					</template>
+					<template #application>
+						<h2 class="mb-4 text-white">Logiciels métier</h2>
+						<RealisationApplications :chunkedApps="chunkedApps"/>
+					</template>
+				</Tabs>
 			</div>
 		</div>
 
-		<Tabs :tabs="myTabs" default-tab="tous">
+		<!-- <Tabs :tabs="myTabs" default-tab="tous">
 			<template #tous>
 				<h2 class="mb-4">Toutes mes réalisations</h2>
 				<RealisationSites :chunkedSites="chunkedSites" />
+				<RealisationApplications :chunkedApps="chunkedApps"/>
 			</template>
 			<template #site_web>
 				<h2 class="mb-4">Sites web</h2>
 				<RealisationSites :chunkedSites="chunkedSites" />
 			</template>
 			<template #application>
-				<h2>Applications métier</h2>
+				<h2>Logiciels métier</h2>
+				<RealisationApplications :chunkedApps="chunkedApps"/>
 			</template>
-		</Tabs>
+		</Tabs> -->
 	</div>
 </template>
 
@@ -38,6 +56,7 @@ import { inject, computed } from 'vue';
 import { Head, Link } from '@inertiajs/vue3';
 import Tabs from '@/Components/TabsComponent.vue';
 import RealisationSites from '@/Components/RealisationSites.vue';
+import RealisationApplications from '@/Components/RealisationApplications.vue'
 
 const props = defineProps(['sites', 'applications']);
 
@@ -46,13 +65,21 @@ const base_url = inject('base_url');
 const myTabs = [
 	{ id: 'tous', title: 'Tous' },
 	{ id: 'site_web', title: 'Sites web' },
-	{ id: 'application', title: 'Applications métier' }
+	{ id: 'application', title: 'Logiciels métier' }
 ];
 
 const chunkedSites = computed(() => {
     const result = [];
     for (let i = 0; i < props.sites.length; i += 2) {
         result.push(props.sites.slice(i, i + 2));
+    }
+    return result;
+});
+
+const chunkedApps = computed(() => {
+    const result = [];
+    for (let i = 0; i < props.applications.length; i += 2) {
+        result.push(props.applications.slice(i, i + 2));
     }
     return result;
 });

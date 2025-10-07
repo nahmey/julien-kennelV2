@@ -48,7 +48,7 @@
 						class="img-fluid rounded shadow"
 						/>
 					</div>
-					<div class="col-md-6 order-md-1">
+					<div class="col-md-6 order-md-1 lead">
 						<h2 class="mb-4">Mon parcours</h2>
 						<p>
 							J’ai découvert le développement web par passion, en commençant en autodidacte. Curieux de nature, je me suis rapidement formé aux technologies modernes comme
@@ -73,7 +73,7 @@
 						class="img-fluid rounded shadow"
 						/>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-6 lead">
 						<h2 class="mb-4">Mon approche</h2>
 						<p>
 							Ma priorité, c’est de comprendre vos besoins métiers avant d’écrire la moindre ligne de code. Chaque projet débute par une phase d’écoute active et d’échange approfondi.
@@ -99,7 +99,7 @@
 						class="img-fluid rounded shadow"
 						/>
 					</div>
-					<div class="col-md-6 order-md-1">
+					<div class="col-md-6 order-md-1 lead">
 						<h2 class="mb-4">Ma vision du développement</h2>
 						<p>
 							Pour moi, le développement web ne se résume pas à créer un site ou une application : il s’agit de <strong>résoudre des problèmes concrets</strong>, de
@@ -118,10 +118,10 @@
 		<section class="py-5 bg-light text-center">
 			<div class="container">
 				<h2 class="mb-3">Un projet en tête ?</h2>
-				<p class="mb-4">
+				<p class="mb-4 lead">
 					Que vous souhaitiez moderniser un outil existant ou créer une solution sur mesure, je serai ravi d’en discuter avec vous.
 				</p>
-				<a href="#contact" class="btn btn-primary btn-lg">Discutons ensemble</a>
+				<Link :href="route('contacts')" class="btn btn-primary btn-lg">Discutons ensemble</Link>
 			</div>
 		</section>
 

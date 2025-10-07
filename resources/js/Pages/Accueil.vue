@@ -4,12 +4,12 @@
 
 		<TypingEffect :base_url="base_url" />
 
-		<section class="untree_co-section">
+		<section class="untree_co-section pt-0">
 			<div class="container">
 				<div class="row mb-5 justify-content-center">
 					<div class="col-lg-6 text-center">
 						<h2 class="section-title text-center mb-3">Mes Services</h2>
-						<p>Développeur Web depuis plus de 6 ans, je réalise pour vous des applications métier et sites internet sur mesure selon vos besoins.</p>
+						<p class="lead">Développeur Web depuis plus de 6 ans, je réalise pour vous des applications métier et sites internet sur mesure selon vos besoins.</p>
 					</div>
 				</div>
 				<div class="row align-items-stretch">

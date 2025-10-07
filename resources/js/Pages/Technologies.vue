@@ -19,10 +19,10 @@
 
 		<div class="untree_co-section bg-light">
 			<div class="container">
-				<h2 class="mb-5">Frameworks</h2>
-				<div class="row">
+				<!-- <h2 class="mb-5">Frameworks</h2> -->
+				<div class="d-flex flex-wrap justify-content-between">
 					<div class="row col-12 col-md-6">
-						<div class="col-6 col-md-4 mb-4" v-for="data in frameworks">
+						<div class="col-6 col-md-4 mb-4" v-for="data in technologies">
 							<div class="card h-100 border-0 shadow-sm rounded-lg text-center p-4 transition-all hover-transform hover-shadow">
 								<div class="mb-2">
 									<img :src="base_url + data.src" alt="Image" class="img-fluid col-8">
@@ -31,26 +31,25 @@
 							</div>
 						</div>
 					</div>
-				</div>
-<!-- 				<div class="d-flex flex-wrap justify-content-between">
-					<div class="col-12 col-md-6 col-lg-3 p-0" v-for="data in frameworks">
-						<div class="media-1 h-100 d-flex flex-column justify-content-between">
-							<a href="#" class="d-block mb-3">
-								<img :src="base_url + data.src" alt="Image" class="img-fluid">
-							</a>
-							<div class="d-flex">
-								<div>
-									<h3><a href="#">{{data.nom}}</a></h3>
-									<p>{{data.description}}</p>
-								</div>
-							</div>
-						</div>
+					<div class="col-12 col-md-6">
+						<h2>Fiabilité et sécurité</h2>
+						<p class="lead mt-4">
+							Découvrez les technologies qui composent mon environnement de développement.
+						</p>
+
+						<p class="lead mt-4">
+							Du front-end au back-end, j’utilise un écosystème complet et cohérent : frameworks modernes pour des interfaces dynamiques, langages robustes pour la logique métier, et outils performants pour le déploiement et la maintenance.
+						</p>
+
+						<p class="lead mt-4">
+							Ce choix réfléchi de technologies me permet d’assurer la fiabilité, la sécurité et la performance de chaque application, tout en facilitant leur évolution dans le temps.
+						</p>
 					</div>
-				</div> -->
+				</div>
 			</div>
 		</div>
 
-		<div class="untree_co-section" style="background: url('images/fond_noir_2.jpg') center/cover no-repeat fixed;">
+<!-- 		<div class="untree_co-section" style="background: url('images/fond_noir_2.jpg') center/cover no-repeat fixed;">
 			<div class="container pt-4 pb-4 text-white">
 				<h2 class="mb-5">Langages de programmation</h2>
 				<div class="row">
@@ -65,25 +64,10 @@
 						</div>
 					</div>
 				</div>
-<!-- 				<div class="d-flex flex-wrap justify-content-between">
-					<div class="card-body col-12 col-md-6 col-lg-3" v-for="data in langages">
-						<div class="media-2 h-100 d-flex flex-column justify-content-between">
-							<a href="#" class="d-block mb-3 mt-auto">
-								<img :src="base_url + data.src" alt="Image" class="img-fluid">
-							</a>
-							<div class="d-flex">
-								<div>
-									<h3><a href="#" class="text-white">{{data.nom}}</a></h3>
-									<p>{{data.description}}</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div> -->
 			</div>
-		</div>
+		</div> -->
 
-		<div class="untree_co-section bg-light">
+<!-- 		<div class="untree_co-section bg-light">
 			<div class="container mt-5">
 				<h2 class="mb-5">Base de données et autre</h2>
 				<div class="row">
@@ -99,7 +83,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 <!-- 		<div class="cta-section bg-light pt-4 pb-4">
 			<div class="container mt-5">
@@ -130,7 +114,7 @@ import { Head, Link } from '@inertiajs/vue3';
 
 const base_url = inject('base_url');
 
-const frameworks = ref([
+const technologies = ref([
 	{
 		id: 1,
 		nom: 'Laravel',
@@ -148,7 +132,49 @@ const frameworks = ref([
 		nom: 'CodeIgniter',
 		description : 'CodeIgniter est un framework PHP rapide et léger, parfait pour les projets nécessitant des performances élevées. Facile à prendre en main, il offre une structure claire, tout en laissant une grande liberté aux développeurs.',
 		src: '/images/logo/codeigniter.png'
+	},
+	{
+		id: 4,
+		nom: 'PHP',
+		description : 'PHP est un langage de script côté serveur largement utilisé pour développer des sites web dynamiques. Il est rapide, simple à apprendre et bien intégré à de nombreux systèmes de gestion de bases de données.',
+		src: '/images/logo/php.png'
+	},
+	{
+		id: 5,
+		nom: 'Javascript',
+		description : 'JavaScript est un langage de programmation essentiel pour le web, permettant d’ajouter des interactions, des animations et des fonctionnalités dynamiques aux pages et applications en ligne modernes.',
+		src: '/images/logo/js.png'
+	},
+	{
+		id: 6,
+		nom: 'HTML',
+		description : 'HTML est le langage standard pour structurer le contenu des pages web. Il définit les titres, paragraphes, images, liens et formulaires, et constitue la base indispensable de toute interface utilisateur en ligne.',
+		src: '/images/logo/html.png'
+	},
+	{
+		id: 7,
+		nom: 'CSS',
+		description : 'CSS est un langage de style utilisé pour mettre en forme les pages HTML. Il permet de contrôler l’apparence visuelle d’un site, comme les couleurs, les polices, les marges ou la disposition des éléments.',
+		src: '/images/logo/css.png'
+	},
+	{
+		id: 8,
+		nom: 'PostgreSQL',
+		description : 'PostgreSQL est un système de gestion de base de données open-source puissant et robuste. Il supporte des requêtes complexes, une haute fiabilité et est idéal pour les projets de grande envergure.',
+		src: '/images/logo/postgresql.png'
+	},
+	{
+		id: 9,
+		nom: 'MySQL',
+		description : 'MySQL est un système de gestion de base de données relationnelle très répandu. Rapide et fiable, il permet de stocker, organiser et interroger efficacement les données d’un site ou d’une application.',
+		src: '/images/logo/mysql.png'
 	}
+	// {
+	// 	id: 10,
+	// 	nom: 'Leaflet',
+	// 	description : 'Leaflet est une bibliothèque JavaScript légère et moderne pour créer des cartes interactives. Facile à utiliser et très performante, elle permet d’intégrer des cartes dynamiques avec marqueurs, popups et couches personnalisées.',
+	// 	src: '/images/logo/leaflet.png'
+	// }
 ]);
 
 const langages = ref([
@@ -164,12 +190,6 @@ const langages = ref([
 		description : 'JavaScript est un langage de programmation essentiel pour le web, permettant d’ajouter des interactions, des animations et des fonctionnalités dynamiques aux pages et applications en ligne modernes.',
 		src: '/images/logo/js.png'
 	},
-	// {
-	// 	id: 3,
-	// 	nom: 'Jquery',
-	// 	description : '',
-	// 	src: '/images/logo/jquery.png'
-	// },
 	{
 		id: 4,
 		nom: 'HTML',

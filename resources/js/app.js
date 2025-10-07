@@ -10,6 +10,7 @@ import { createApp, h } from 'vue';
 import { createInertiaApp, Link } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy';
+import { router } from '@inertiajs/vue3'
 
 import Layout from '@/Layout.vue';
 // import helpers from '@/helpers';
@@ -46,6 +47,7 @@ createInertiaApp({
 
       	.mount(el)
   	},
+
   	progress: {
 		delay: 250, // The delay after which the progress bar will appear, in milliseconds...
 		color: '#29d', // The color of the progress bar...
@@ -53,3 +55,8 @@ createInertiaApp({
 		showSpinner: true, // Whether the NProgress spinner will be shown...
 	},
 })
+
+// router.on('finish', () => {
+// 	console.log('toto')
+// 	window.scrollTo({ top: 0, behavior: 'smooth' }) // 💡 smooth pour un effet fluide
+// })

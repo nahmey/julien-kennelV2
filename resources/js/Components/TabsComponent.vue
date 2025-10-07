@@ -1,6 +1,9 @@
 <template>
-	<section class="untree_co-section bg-light">
-		<div class="container">
+	<section class="untree_co-section">
+		<!-- <div class="container"> -->
+<!-- 			<div>
+				Découvrez une sélection de projets que j’ai conçus : sites web, applications et logiciels métiers, tous pensés pour répondre à des besoins concrets et faciliter le travail au quotidien. Chaque réalisation est le fruit d’un accompagnement personnalisé, d’un développement sur mesure et d’une attention particulière portée à l’expérience utilisateur.
+			</div> -->
 			<ul class="nav" role="tablist">
 				<li
 				v-for="(tab, index) in tabs"
@@ -9,7 +12,7 @@
 				role="presentation"
 				>
 					<button
-					:class="['btn btn-secondary mr-4', { active: activeTab === tab.id }]"
+					:class="['btn btn-light mr-2 mr-md-4', { active: activeTab === tab.id }]"
 					@click="setActiveTab(tab.id)"
 					:id="`${tab.id}-tab`"
 					type="button"
@@ -21,10 +24,10 @@
 					</button>
 				</li>
 			</ul>
-		</div>
+		<!-- </div> -->
 	</section>
 	<section class="untree_co-section">
-		<div class="container">
+		<!-- <div class="container"> -->
 			<div class="tab-content">
 				<!-- On encapsule tout dans un seul div -->
 				<transition name="fade" mode="out-in">
@@ -43,7 +46,7 @@
 					</div>
 				</transition>
 			</div>
-		</div>
+		<!-- </div> -->
 	</section>
 </template>
 

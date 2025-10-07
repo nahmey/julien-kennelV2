@@ -1,14 +1,49 @@
 <template>
 	<div>
+		<!-- Menu mobile -->
 		<div class="site-mobile-menu site-navbar-target">
 			<div class="site-mobile-menu-header">
 				<div class="site-mobile-menu-close">
-					<span class="icofont-close js-menu-toggle"></span>
+					<span class="icofont-close js-menu-toggle" @click="toggleMobileMenu"></span>
 				</div>
 			</div>
-			<div class="site-mobile-menu-body"></div>
+			<div class="site-mobile-menu-body">
+				<ul class="site-menu site-nav-wrap">
+					<li :class="[(active_route === 'accueil' ? active_route_class : '')]">
+						<Link :href="route('accueil')" @click="toggleMobileMenu">
+							Accueil
+						</Link>
+					</li>
+					<li :class="[(active_route === 'realisations' ? active_route_class : '')]">
+						<Link :href="route('realisations')" @click="toggleMobileMenu">
+							Réalisations
+						</Link>
+					</li>
+					<li :class="[(active_route === 'technologies' ? active_route_class : '')]">
+						<Link :href="route('technologies')" @click="toggleMobileMenu">
+							Technologies
+						</Link>
+					</li>
+					<li :class="[(active_route === 'tarifs' ? active_route_class : '')]">
+						<Link :href="route('tarifs')" @click="toggleMobileMenu">
+							Tarifs
+						</Link>
+					</li>
+					<li :class="[(active_route === 'a-propos' ? active_route_class : '')]">
+						<Link :href="route('a-propos')" @click="toggleMobileMenu">
+							A propos
+						</Link>
+					</li>
+					<li :class="[(active_route === 'contacts' ? active_route_class : '')]">
+						<Link :href="route('contacts')" @click="toggleMobileMenu">
+							Contact
+						</Link>
+					</li>
+				</ul>
+			</div>
 		</div>
-		<!-- Navbar avec effet de couleur au scroll -->
+
+		<!-- Navbar -->
 		<nav class="site-nav" :class="{ 'scrolled': isScrolled }">
 			<div class="container">
 				<div class="site-navigation d-flex justify-content-between">
@@ -47,7 +82,7 @@
 							</Link>
 						</li>
 					</ul>
-					<a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
+					<a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" @click.prevent="toggleMobileMenu">
 						<span></span>
 					</a>
 				</div>
@@ -55,39 +90,41 @@
 		</nav>
 	</div>
 </template>
+
 <script setup>
 import { Link, usePage, router } from '@inertiajs/vue3';
 import { watch, inject, ref, onMounted, onUnmounted } from 'vue';
 
-const page = usePage()
+const page = usePage();
 const base_url = inject('base_url');
-const active_route = route().current() ? ref(route().current()) : ref('accueil');
+const active_route = ref(route().current() || 'accueil');
 const active_route_class = 'active';
-
 const isScrolled = ref(false);
+const isMobileMenuOpen = ref(false);
+
+const toggleMobileMenu = () => {
+    isMobileMenuOpen.value = !isMobileMenuOpen.value;
+    document.body.classList.toggle('offcanvas-menu');
+    const toggles = document.querySelectorAll('.js-menu-toggle');
+    toggles.forEach(toggle => toggle.classList.toggle('active'));
+};
 
 const handleScroll = () => {
-	isScrolled.value = window.scrollY > 50
-}
+    isScrolled.value = window.scrollY > 50;
+};
 
 onMounted(() => {
-	window.addEventListener('scroll', handleScroll)
-})
+    window.addEventListener('scroll', handleScroll);
+});
 
 onUnmounted(() => {
-	window.removeEventListener('scroll', handleScroll)
-})
+    window.removeEventListener('scroll', handleScroll);
+});
 
-/*
- * Watch 
- */
 router.on('finish', (event) => {
-    active_route.value = route().current()
-    console.log(active_route.value)
-})
-
+    active_route.value = route().current();
+});
 </script>
-
 <style scoped>
 /* Navbar fixe avec animation de couleur au scroll */
 .site-nav {
@@ -177,5 +214,22 @@ router.on('finish', (event) => {
 /* État initial (navbar sombre) : élément actif en vert */
 .site-nav .site-navigation .site-menu > li.active > a {
 	color: #99D98F !important;
+}
+
+.site-mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background: white;
+    z-index: 2000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.offcanvas-menu .site-mobile-menu {
+    transform: translateX(0);
 }
 </style>
