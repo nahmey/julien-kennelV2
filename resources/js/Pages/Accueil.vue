@@ -4,7 +4,7 @@
 
 		<TypingEffect :base_url="base_url" />
 
-		<div class="untree_co-section">
+		<section class="untree_co-section">
 			<div class="container">
 				<div class="row mb-5 justify-content-center">
 					<div class="col-lg-6 text-center">
@@ -33,49 +33,61 @@
 					</div>
 
 					<div class="col-12 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-3 mt-4 mt-md-0" >
-						<div class="feature-1 d-md-flex" v-for="service in services_col_2">
+						<div class="feature-1 d-md-flex" v-for="(service, key) in services_col_2" :style="{background: key === 0 ? 'url(\'images/fond_noir_2.jpg\') center/cover no-repeat' : ''}">
+							<div class="align-self-center">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" :class="key === 0 ? service.icone + ' lucide mb-4 text-light' : service.icone + ' lucide mb-4'"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+								<h3 :class="key === 0 ? 'text-light' : ''">{{service.titre}}</h3>
+								<p :class="key === 0 ? 'text-light mb-0' : 'mb-0'">{{service.description}}</p>
+							</div>
+						</div>
+
+<!-- 						<div class="feature-1 d-md-flex" v-for="service in services_col_2">
 							<div class="align-self-center">
 								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" :class="service.icone + ' lucide mb-4'"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
 								<h3>{{service.titre}}</h3>
 								<p class="mb-0">{{service.description}}</p>
 							</div>
-						</div>
+						</div> -->
 					</div>
 
 				</div>
 			</div>
-		</div>
+		</section>
 
-		<div class="untree_co-section count-numbers py-5">
-		<div class="container">
-			<div class="row d-flex justify-content-between w-100 text-center">
-				<div class="col-12 col-sm-6 col-md-6 col-lg-3">
-					<div class="counter-wrap">
-						<div class="counter text-vert-fonce">
-							+<span class="" data-number="2000000">0</span>
-						</div>
-						<span class="caption">Lignes de codes</span>
-					</div>
-				</div>
-				<div class="col-12 col-sm-6 col-md-6 col-lg-3">
-					<div class="counter-wrap">
-						<div class="counter text-vert-fonce">
-							+<span class="" data-number="40">0</span>
-						</div>
-						<span class="caption">Applications et sites web</span>
-					</div>
-				</div>
-				<div class="col-12 col-sm-6 col-md-6 col-lg-3">
-					<div class="counter-wrap">
-						<div class="counter text-vert-fonce">
-							+<span class="" data-number="6">0</span>
-						</div>
-						<span class="caption">Années d'expériences</span>
-					</div>
+		<section class="untree_co-section count-numbers py-5">
+			<div class="container">
+				<div class="row d-flex justify-content-between w-100 text-center">
+					<!-- Compteur 1 -->
+			        <Counter
+			          title="Lignes de codes"
+			          :number="2000000"
+			          suffix="+"
+			          colorClass="bg-vert-fonce"
+			          :duration="2000"
+			        />
+
+			        <!-- Compteur 2 -->
+			        <Counter
+			          title="Applications et sites web"
+			          :number="40"
+			          suffix="+"
+			          colorClass="bg-vert-fonce"
+			          :duration="2000"
+			          :startDelay="500"
+			        />
+
+			        <!-- Compteur 3 -->
+			        <Counter
+			          title="Années d'expériences"
+			          :number="6"
+			          suffix="+"
+			          colorClass="bg-vert-fonce"
+			          :duration="2000"
+			          :startDelay="1000"
+			        />
 				</div>
 			</div>
-		</div>
-	</div>
+		</section>
 
 
 
@@ -130,7 +142,7 @@
 
 
 
-	<div class="cta-section p-4" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/computer_10.jpg') no-repeat center / cover fixed;">
+	<div class="cta-section p-4" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/fond_noir_1.jpg') no-repeat center / cover fixed;">
 		<div class="container p-4">
 			<div class="row text-center justify-content-center mb-5">
 				<div class="col-lg-7">
@@ -297,6 +309,7 @@ import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 
 import TypingEffect from '@/Components/TypingEffect.vue';
+import Counter from '@/Components/CounterSection.vue';
 
 const base_url = inject('base_url');
 const carousel_sites = ref([]);

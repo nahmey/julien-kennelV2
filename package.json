@@ -17,7 +17,9 @@
     },
     "dependencies": {
         "@inertiajs/vue3": "^1.2.0",
+        "bootstrap": "^4.6.2",
         "dayjs": "^1.11.13",
+        "lucide-vue-next": "^0.545.0",
         "vue3-carousel": "^0.8.1"
     }
 }

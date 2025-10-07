@@ -2,14 +2,14 @@
 	<div>
 		<Head title="Réalisations – Sites web et applications | Julien Kennel" />
 
-		<div class="hero hero-inner" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/computer_11.jpg') no-repeat center / cover fixed;">
+		<div class="hero hero-inner" style="background: url('images/fond_noir_2.jpg') center/cover no-repeat fixed;">
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-lg-6 mx-auto text-center">
 						<div class="intro-wrap">
 							<h1 class="mb-0">Réalisations</h1>
 							<p class="text-white">
-								<!-- Mes technologies préférées que j'utilise au quotidien. -->
+								Découvrez mon portfolio de projets digitaux réalisés pour mes clients
 							</p>
 						</div>
 					</div>
@@ -17,63 +17,128 @@
 			</div>
 		</div>
 
-		<div class="untree_co-section">
-			<div class="container">
-<!-- 				<div class="row mb-5 justify-content-center">
-					<div class="col-lg-6 text-center">
-						<h2 class="section-title text-center mb-3">Mes Services</h2>
-						<p>Développeur Web depuis plus de 6 ans, je réalise pour vous des applications métier et sites internet sur mesure selon vos besoins.</p>
-					</div>
-				</div> -->
-				<div class="row align-items-stretch">
-					<div class="p-4 col-12 col-md-6 ">
-						<div class="feature-1-wrap d-md-flex flex-md-column order-lg-1 feature-img-bg" style="background-image: url('images/computer_4_bis.jpg');height: 500px;">
-							<div class="feature-1 d-md-flex">
-								<div class="align-self-center">
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-grid mb-4 text-white"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
-									<!-- <span class="flaticon-restaurant display-4 text-primary"></span> -->
-									<h3 class="text-white">Site internet</h3>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="p-4 col-12 col-md-6 ">
-						<div class="feature-1-wrap d-md-flex flex-md-column order-lg-1 feature-img-bg" style="background-image: url('images/computer_4_bis.jpg');height: 500px;">
-							<div class="feature-1 d-md-flex">
-								<div class="align-self-center">
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-grid mb-4 text-white"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
-									<!-- <span class="flaticon-restaurant display-4 text-primary"></span> -->
-									<h3 class="text-white">Logiciels métiers</h3>
-								</div>
-							</div>
-						</div>
-					</div>
-
-
-
-				</div>
-			</div>
-		</div>
-
-
-		<div class="untree_co-section">
-			<div class="container">
-				SITE INTERNET
-
-			</div>
-		</div>
-
-
-		<div class="untree_co-section">
-			<div class="container">
-				LOGICIEL METIER
-
-			</div>
-		</div>
+		<Tabs :tabs="myTabs" default-tab="tous">
+			<template #tous>
+				<h2 class="mb-4">Toutes mes réalisations</h2>
+				<RealisationSites :chunkedSites="chunkedSites" />
+			</template>
+			<template #site_web>
+				<h2 class="mb-4">Sites web</h2>
+				<RealisationSites :chunkedSites="chunkedSites" />
+			</template>
+			<template #application>
+				<h2>Applications métier</h2>
+			</template>
+		</Tabs>
 	</div>
 </template>
 
 <script setup>
+import { inject, computed } from 'vue';
 import { Head, Link } from '@inertiajs/vue3';
+import Tabs from '@/Components/TabsComponent.vue';
+import RealisationSites from '@/Components/RealisationSites.vue';
+
+const props = defineProps(['sites', 'applications']);
+
+const base_url = inject('base_url');
+
+const myTabs = [
+	{ id: 'tous', title: 'Tous' },
+	{ id: 'site_web', title: 'Sites web' },
+	{ id: 'application', title: 'Applications métier' }
+];
+
+const chunkedSites = computed(() => {
+    const result = [];
+    for (let i = 0; i < props.sites.length; i += 2) {
+        result.push(props.sites.slice(i, i + 2));
+    }
+    return result;
+});
 </script>
+
+<style>
+.gal-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Animation pour le zoom */
+}
+
+.gal-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Dégradé de base */
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.1) 30%,
+        rgba(0, 0, 0, 0.7) 100%
+    );
+    z-index: 1;
+    transition: background 0.3s ease; /* Animation pour le dégradé */
+}
+
+.gal-item:hover {
+    transform: scale(1.01); /* Légèrement agrandit la carte au survol */
+    cursor: pointer;
+}
+
+.gal-item:hover::before {
+    /* Assombrit légèrement le fond au survol */
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0.5) 30%,
+        rgba(0, 0, 0, 0.9) 100%
+    );
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    color: white;
+    z-index: 2;
+    text-align: left;
+    transition: transform 0.3s ease; /* Animation pour le texte */
+}
+
+.gal-item:hover .card-overlay {
+    transform: translateY(-5px); /* Légèrement remonte le texte pour un effet dynamique */
+}
+
+.card-overlay h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.card-overlay p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.card-overlay .btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.card-overlay .btn:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+</style>

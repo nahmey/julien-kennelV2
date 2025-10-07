@@ -1,5 +1,6 @@
 <template>
-	<div class="hero">
+	<!-- subtle-digital-pattern.jpg -->
+	<div class="hero" style="background: url('images/fond_noir_1.jpg') center/cover no-repeat fixed;">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-7">
@@ -12,7 +13,7 @@
 						</h1>
 					</div>
 				</div>
-				<div class="col-lg-5">
+				<div class="col-lg-5 d-none d-sm-block">
 					<div class="slides">
 						<img 
 						v-for="(image, index) in images" 
@@ -97,7 +98,9 @@ onUnmounted(() => {
 
 <style scoped>
 
-
+.slides{
+	background-color: black!important;
+}
 
 
 

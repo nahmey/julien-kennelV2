@@ -2,7 +2,7 @@
 	<div>
 		<Head title="Technologies – Julien Kennel, développeur web freelance" />
 
-		<div class="hero hero-inner" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/computer_3_bis.jpg') no-repeat center / cover fixed;">
+		<div class="hero hero-inner" style="background: url('images/fond_noir_1.jpg') center/cover no-repeat fixed;">
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-lg-6 mx-auto text-center">
@@ -17,10 +17,22 @@
 			</div>
 		</div>
 
-		<div class="untree_co-section">
+		<div class="untree_co-section bg-light">
 			<div class="container">
 				<h2 class="mb-5">Frameworks</h2>
-				<div class="d-flex flex-wrap justify-content-between">
+				<div class="row">
+					<div class="row col-12 col-md-6">
+						<div class="col-6 col-md-4 mb-4" v-for="data in frameworks">
+							<div class="card h-100 border-0 shadow-sm rounded-lg text-center p-4 transition-all hover-transform hover-shadow">
+								<div class="mb-2">
+									<img :src="base_url + data.src" alt="Image" class="img-fluid col-8">
+								</div>
+								<p class="font-weight-bold mb-0">{{data.nom}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+<!-- 				<div class="d-flex flex-wrap justify-content-between">
 					<div class="col-12 col-md-6 col-lg-3 p-0" v-for="data in frameworks">
 						<div class="media-1 h-100 d-flex flex-column justify-content-between">
 							<a href="#" class="d-block mb-3">
@@ -34,14 +46,26 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 
-		<div class="cta-section" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/computer_10.jpg') no-repeat center / cover fixed;">
-			<div class="container mt-5 pt-4 pb-4 text-white">
+		<div class="untree_co-section" style="background: url('images/fond_noir_2.jpg') center/cover no-repeat fixed;">
+			<div class="container pt-4 pb-4 text-white">
 				<h2 class="mb-5">Langages de programmation</h2>
-				<div class="d-flex flex-wrap justify-content-between">
+				<div class="row">
+					<div class="row col-12 col-md-8">
+						<div class="col-6 col-md-3 mb-4" v-for="data in langages">
+							<div class="card h-100 border-0 shadow-sm rounded-lg text-center p-4 transition-all hover-transform hover-shadow">
+								<div class="mb-2">
+									<img :src="base_url + data.src" alt="Image" class="img-fluid col-8">
+								</div>
+								<p class="font-weight-bold mb-0 text-dark">{{data.nom}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+<!-- 				<div class="d-flex flex-wrap justify-content-between">
 					<div class="card-body col-12 col-md-6 col-lg-3" v-for="data in langages">
 						<div class="media-2 h-100 d-flex flex-column justify-content-between">
 							<a href="#" class="d-block mb-3 mt-auto">
@@ -55,24 +79,21 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 
-		<div class="untree_co-section">
+		<div class="untree_co-section bg-light">
 			<div class="container mt-5">
-				<h2 class="mb-5">Base de données</h2>
-				<div class="d-flex flex-wrap">
-					<div class="col-12 col-md-6 col-lg-3" v-for="data in bdds">
-						<div class="media-1 h-100 d-flex flex-column justify-content-between">
-							<a href="#" class="d-block mb-3">
-								<img :src="base_url + data.src" alt="Image" class="img-fluid">
-							</a>
-							<div class="d-flex">
-								<div>
-									<h3><a href="#">{{data.nom}}</a></h3>
-									<p>{{data.description}}</p>
+				<h2 class="mb-5">Base de données et autre</h2>
+				<div class="row">
+					<div class="row col-12 col-md-6">
+						<div class="col-6 col-md-4 mb-4" v-for="data in bdds">
+							<div class="card h-100 border-0 shadow-sm rounded-lg text-center p-4 transition-all hover-transform hover-shadow">
+								<div class="mb-2">
+									<img :src="base_url + data.src" alt="Image" class="img-fluid col-8">
 								</div>
+								<p class="font-weight-bold mb-0">{{data.nom}}</p>
 							</div>
 						</div>
 					</div>
@@ -80,7 +101,7 @@
 			</div>
 		</div>
 
-		<div class="cta-section bg-light pt-4 pb-4">
+<!-- 		<div class="cta-section bg-light pt-4 pb-4">
 			<div class="container mt-5">
 				<h2 class="mb-5">Autres</h2>
 				<div class="row">
@@ -99,44 +120,7 @@
 					</div>
 				</div>
 			</div>
-
-<!-- 					
-					<div class="col-6 col-md-6 col-lg-3">
-					<div class="media-1">
-					<a href="#" class="d-block mb-3"><img src="images/hero-slider-2.jpg" alt="Image" class="img-fluid"></a>
-					<div class="d-flex">
-					<div>
-					<h3><a href="#">Discovering Best</a></h3>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-					</div>
-					</div>
-					</div>
-					</div>
-					<div class="col-6 col-md-6 col-lg-3">
-					<div class="media-1">
-					<a href="#" class="d-block mb-3"><img src="images/hero-slider-3.jpg" alt="Image" class="img-fluid"></a>
-					<div class="d-flex">
-					<div>
-					<h3><a href="#">A New Moments of Life</a></h3>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-					</div>
-					</div>
-					</div>
-					</div>
-					<div class="col-6 col-md-6 col-lg-3">
-					<div class="media-1">
-					<a href="#" class="d-block mb-3"><img src="images/hero-slider-4.jpg" alt="Image" class="img-fluid"></a>
-					<div class="d-flex">
-					<div>
-					<h3><a href="#">Joy To Your Journey</a></h3>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-					</div>
-					</div>
-					</div>
-					</div> -->
-				<!-- </div> -->
-			<!-- </div> -->
-		</div>
+		</div> -->
 	</div>
 </template>
 
@@ -212,6 +196,12 @@ const bdds = ref([
 		nom: 'MySQL',
 		description : 'MySQL est un système de gestion de base de données relationnelle très répandu. Rapide et fiable, il permet de stocker, organiser et interroger efficacement les données d’un site ou d’une application.',
 		src: '/images/logo/mysql.png'
+	},
+	{
+		id: 3,
+		nom: 'Leaflet',
+		description : 'Leaflet est une bibliothèque JavaScript légère et moderne pour créer des cartes interactives. Facile à utiliser et très performante, elle permet d’intégrer des cartes dynamiques avec marqueurs, popups et couches personnalisées.',
+		src: '/images/logo/leaflet.png'
 	}
 ]);
 
@@ -231,3 +221,19 @@ const cms = ref([
 ]);
 
 </script>
+
+<style>
+  .transition-all {
+    transition: all 0.3s ease;
+  }
+  .hover-transform:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+  }
+  .hover-shadow:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  }
+  .card {
+    height: 100%;
+  }
+</style>

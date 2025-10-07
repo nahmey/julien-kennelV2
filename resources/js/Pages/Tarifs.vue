@@ -2,7 +2,7 @@
 	<div>
 		<Head title="Tarifs – Création de site et application | Julien Kennel" />
 
-		<div class="hero hero-inner" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/computer_11.jpg') no-repeat center / cover fixed;">
+		<div class="hero hero-inner" style="background: url('images/fond_noir_2.jpg') center/cover no-repeat fixed;">
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-lg-6 mx-auto text-center">
@@ -20,7 +20,7 @@
 		<section class="py-5 bg-light text-center">
   <div class="container">
     <h2 class="mb-3">Choisissez la formule adaptée à votre projet</h2>
-    <p class="lead mb-0">
+    <p class="mb-0">
       Que vous ayez besoin d’un site vitrine simple ou d’une application métier complexe, je propose plusieurs forfaits pour répondre précisément à vos besoins, avec transparence sur les technologies, la sécurité, et les délais.
     </p>
   </div>

@@ -2,7 +2,7 @@
 	<div>
 		<Head title="À propos – Julien Kennel, développeur web freelance" />
 
-		<div class="hero hero-inner" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/computer_4.jpg') no-repeat center / cover fixed;">
+		<div class="hero hero-inner" style="background: url('images/fond_noir_1.jpg') center/cover no-repeat fixed;">
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-lg-6 mx-auto text-center">

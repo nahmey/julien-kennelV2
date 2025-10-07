@@ -17,17 +17,17 @@
         <link href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-        <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
-        <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
-        <link rel="stylesheet" href="{{asset('css/owl.theme.default.min.css')}}">
-        <link rel="stylesheet" href="{{asset('css/jquery.fancybox.min.css')}}">
+        <!-- <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}"> -->
+        <!-- <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}"> -->
+        <!-- <link rel="stylesheet" href="{{asset('css/owl.theme.default.min.css')}}"> -->
+        <!-- <link rel="stylesheet" href="{{asset('css/jquery.fancybox.min.css')}}"> -->
         <link rel="stylesheet" href="{{asset('fonts/icomoon/style.css')}}">
-        <link rel="stylesheet" href="{{asset('fonts/flaticon/font/flaticon.css')}}">
-        <link rel="stylesheet" href="{{asset('css/daterangepicker.css')}}">
-        <link rel="stylesheet" href="{{asset('css/aos.css')}}">
+        <!-- <link rel="stylesheet" href="{{asset('fonts/flaticon/font/flaticon.css')}}"> -->
+        <!-- <link rel="stylesheet" href="{{asset('css/daterangepicker.css')}}"> -->
+        <!-- <link rel="stylesheet" href="{{asset('css/aos.css')}}"> -->
         <!-- <link rel="stylesheet" href="{{asset('css/style.css')}}"> -->
 
-        <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+        <!-- <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script> -->
 
         @routes
         @vite(['resources/js/app.js', 'resources/css/style.css'])
@@ -39,7 +39,7 @@
         @inertia
     </body>
 
-    <script src="{{asset('js/jquery-3.4.1.min.js')}}"></script>
+<!--     <script src="{{asset('js/jquery-3.4.1.min.js')}}"></script>
     <script src="{{asset('js/popper.min.js')}}"></script>
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <script src="{{asset('js/owl.carousel.min.js')}}"></script>
@@ -47,10 +47,9 @@
     <script src="{{asset('js/jquery.waypoints.min.js')}}"></script>
     <script src="{{asset('js/jquery.fancybox.min.js')}}"></script>
     <script src="{{asset('js/aos.js')}}"></script>
-    <!-- <script src="{{asset('js/moment.min.js')}}"></script> -->
     <script src="{{asset('js/daterangepicker.js')}}"></script>
 
-    <script src="js/typed.js"></script>
+    <script src="js/typed.js"></script> -->
 <!--     <script>
         document.addEventListener('DOMContentLoaded', function() {
         // Select slides and images
@@ -124,5 +123,5 @@
     });
     </script> -->
 
-    <script src="{{asset('js/custom.js')}}"></script>
+    <!-- <script src="{{asset('js/custom.js')}}"></script> -->
 </html>

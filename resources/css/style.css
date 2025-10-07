@@ -185,7 +185,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
     .site-nav .site-navigation .site-menu > li {
       display: inline-block; }
       .site-nav .site-navigation .site-menu > li > a {
-        font-size: 14px;
+        font-size: 16px;
         padding: 10px 15px;
         display: inline-block;
         text-decoration: none !important;
@@ -202,6 +202,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
           background: #1A374D;
           border-color: #1A374D; }
       .site-nav .site-navigation .site-menu > li.active > a {
+        letter-spacing: 0.5px;
+        font-weight: bold;
         color: #99D98F; }
     .site-nav .site-navigation .site-menu .has-children {
       position: relative; }
@@ -560,7 +562,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   background: #6998AB;
   margin-bottom: 100px; }
   .hero.hero-inner {
-    padding: 9rem 0 7rem 0;
+    padding: 9rem 0 12rem 0;
     margin-bottom: auto;
 /*    background: #1A374D;*/
       background-color: #242323;
@@ -1011,7 +1013,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   font-weight: bold; }
 
 .counter-wrap .counter {
-  font-size: 3rem; }
+  font-size: 2rem; }
   .counter-wrap .counter span {
     color: #99D98F; }
   @media (max-width: 991.98px) {
@@ -1529,4 +1531,36 @@ body, html, h1, .h1, h2, .h2, h3, .h3, h4, .h4{
 .scrolltop:hover .svg-icon,
 .scrolltop:hover i {
   color: var(--kt-scrolltop-icon-color-hover);
+}
+
+/* Bouton vert normal */
+.btn-vert {
+  background-color: #7BB378;
+  border-color: #7BB378;
+  color: white;
+}
+
+/* Bouton vert au survol */
+.btn-vert:hover,
+.btn-vert:focus {
+  background-color: #6B9F66;
+  border-color: #6B9F66;
+  color: white;
+}
+
+/* Bouton vert ACTIF (sélectionné) */
+.btn-vert.active,
+.btn-vert:active {
+  background-color: #5A8B54; /* Vert plus foncé */
+  border-color: #5A8B54;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Bouton vert désactivé */
+.btn-vert:disabled,
+.btn-vert.disabled {
+  background-color: #7BB378;
+  border-color: #7BB378;
+  opacity: 0.65;
 }

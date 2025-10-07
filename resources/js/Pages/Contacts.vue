@@ -2,7 +2,7 @@
 	<div>
 		<Head title="Contact – Julien Kennel, création de site web à Saverne" />
 
-		<div class="hero hero-inner" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/computer_3_bis.jpg') no-repeat center / cover fixed;">
+		<div class="hero hero-inner" style="background: url('images/fond_noir_2.jpg') center/cover no-repeat fixed;">
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-lg-6 mx-auto text-center">
