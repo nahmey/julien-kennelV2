@@ -30,7 +30,7 @@
         <!-- <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script> -->
 
         @routes
-        @vite(['resources/js/app.js', 'resources/css/style.css'])
+        @vite(['resources/js/app.js'])
         @inertiaHead
 
     </head>
