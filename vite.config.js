@@ -26,7 +26,7 @@ export default defineConfig(({ mode }) => {
         plugins: [
             laravel({
                 input: [
-                    'resources/sass/app.scss',
+                    // 'resources/sass/app.scss',
                     'resources/js/app.js',
                     // 'resources/js/plugins.bundle.js',
                     // 'resources/js/scripts.bundle.js',
