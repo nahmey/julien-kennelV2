@@ -1758,3 +1758,9 @@ body, html, h1, .h1, h2, .h2, h3, .h3, h4, .h4{
 .mw-1200px{
   max-width: 1200px;
 }
+
+@media (max-width: 768px) {
+  .site-mobile-menu .site-nav-wrap > li > a {
+        font-size: 20px; 
+      }
+}

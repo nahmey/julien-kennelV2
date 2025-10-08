@@ -86,7 +86,7 @@ class FrontController extends Controller
                 'nom' => 'Extranet - CENL',
                 'nom_interne' => 'intranet',
                 'image' => 'images/realisations/intranet.PNG',
-                'images' => ['images/realisations/intranet.PNG', 'images/realisations/intranet_2.png', 'images/realisations/intranet_3.png'],
+                'images' => ['images/realisations/intranet.PNG', 'images/realisations/intranet_4.png', 'images/realisations/intranet_2.png', 'images/realisations/intranet_3.png'],
                 'description' => "Extranet du CEN Lorraine : annuaire, agenda partagé, chat, et accès aux diverses applications internes à l'association.",
                 'description_complete' => "<p>L’extranet est la porte d’entrée unique vers les différentes applications de l’entreprise.
                 Il permet aux salariés de se connecter facilement pour accéder à leur agenda personnel, consulter ceux de leurs collègues, organiser leur emploi du temps de manière collaborative, ou encore consulter l'annuaire de tous les salariés de l'entreprise.</p>

@@ -77,8 +77,8 @@ onBeforeUnmount(() => {
 
 @media (max-width: 768px) {
   .scroll-to-top {
-    bottom: 0.5rem;
-    right: 0.5rem;
+    bottom: 1rem;
+    right: 1rem;
   } 
 }
 </style>

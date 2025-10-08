@@ -11,23 +11,21 @@
 
         <meta name="keywords" content="Julien Kennel, développeur web, création de site internet, développement d'applications métiers, logiciels sur mesure, applications web, Saverne, Strasbourg, Bas-Rhin" />
 
+        <meta name="robots" content="index, follow, max-image-preview:large">
+
+        <meta property="og:site_name" content="Julien Kennel">
+        <meta property="og:url" content="https://julien-kennel.fr">
+        <meta property="og:locale" content="fr_FR">
+        <meta property="og:description" content="Julien Kennel, développeur web, création de site internet, développement d'applications métiers, logiciels sur mesure, applications web, Saverne, Strasbourg, Bas-Rhin">
+
+        <link rel="canonical" href="https://julien-kennel.fr">
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Serif+Pro:wght@400;700&display=swap" rel="stylesheet"> -->
+
         <link href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
-        <!-- <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}"> -->
-        <!-- <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}"> -->
-        <!-- <link rel="stylesheet" href="{{asset('css/owl.theme.default.min.css')}}"> -->
-        <!-- <link rel="stylesheet" href="{{asset('css/jquery.fancybox.min.css')}}"> -->
         <link rel="stylesheet" href="{{asset('fonts/icomoon/style.css')}}">
-        <!-- <link rel="stylesheet" href="{{asset('fonts/flaticon/font/flaticon.css')}}"> -->
-        <!-- <link rel="stylesheet" href="{{asset('css/daterangepicker.css')}}"> -->
-        <!-- <link rel="stylesheet" href="{{asset('css/aos.css')}}"> -->
-        <!-- <link rel="stylesheet" href="{{asset('css/style.css')}}"> -->
-
-        <!-- <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script> -->
 
         @routes
         @vite(['resources/js/app.js'])
@@ -38,90 +36,4 @@
     <body>
         @inertia
     </body>
-
-<!--     <script src="{{asset('js/jquery-3.4.1.min.js')}}"></script>
-    <script src="{{asset('js/popper.min.js')}}"></script>
-    <script src="{{asset('js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('js/owl.carousel.min.js')}}"></script>
-    <script src="{{asset('js/jquery.animateNumber.min.js')}}"></script>
-    <script src="{{asset('js/jquery.waypoints.min.js')}}"></script>
-    <script src="{{asset('js/jquery.fancybox.min.js')}}"></script>
-    <script src="{{asset('js/aos.js')}}"></script>
-    <script src="{{asset('js/daterangepicker.js')}}"></script>
-
-    <script src="js/typed.js"></script> -->
-<!--     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-        // Select slides and images
-        const slides = document.querySelector('.slides');
-        const images = slides.querySelectorAll('img');
-        
-        // Add data-id attributes to images
-        images.forEach((img, i) => {
-            img.setAttribute('data-id', i + 1);
-        });
-
-        // Custom implementation of typing effect
-        function createTypingEffect() {
-            const typedWords = document.querySelector('.typed-words');
-            const words = [
-                "De logiciels métiers", 
-                // "D'applications",
-                "De sites web", 
-                "De base de données"
-            ];
-            
-            let wordIndex = 0;
-            let charIndex = 0;
-            let isDeleting = false;
-            
-            function type() {
-                const currentWord = words[wordIndex];
-                const currentElement = typedWords;
-                
-                // Update slide image
-                const arrayPos = wordIndex + 1;
-                const allImages = document.querySelectorAll('.slides img');
-                allImages.forEach(img => img.classList.remove('active'));
-                const activeImage = document.querySelector(`.slides img[data-id="${arrayPos}"]`);
-                if (activeImage) activeImage.classList.add('active');
-                
-                // Typing mechanism
-                if (!isDeleting && charIndex <= currentWord.length) {
-                    currentElement.textContent = currentWord.substring(0, charIndex + 1);
-                    charIndex++;
-                }
-                
-                if (isDeleting && charIndex >= 0) {
-                    currentElement.textContent = currentWord.substring(0, charIndex);
-                    charIndex--;
-                }
-                
-                // Determine typing state
-                if (!isDeleting && charIndex === currentWord.length) {
-                    setTimeout(() => {
-                        isDeleting = true;
-                    }, 4000);
-                }
-                
-                if (isDeleting && charIndex === 0) {
-                    isDeleting = false;
-                    wordIndex = (wordIndex + 1) % words.length;
-                }
-                
-                // Typing speed
-                const typeSpeed = isDeleting ? 80 : 80;
-                setTimeout(type, typeSpeed);
-            }
-            
-            // Start typing after initial delay
-            setTimeout(type, 1000);
-        }
-
-        // Initialize typing effect
-        createTypingEffect();
-    });
-    </script> -->
-
-    <!-- <script src="{{asset('js/custom.js')}}"></script> -->
 </html>

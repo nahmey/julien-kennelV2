@@ -71,7 +71,8 @@
 			<div class="container">
 				<div class="row text-center">
 					<div class="col-md-8 mb-3 mb-md-0 mx-auto">
-						<p>Copyright © {{dayjs().format('YYYY')}}. Tous droits réservés. - 
+						<p>Copyright © {{dayjs().format('YYYY')}}. Tous droits réservés. <span class="d-none d-md-inline">-</span>
+							<br class="d-block d-md-none" />
 							<Link :href="route('mentions_legales')" class="link-highlight text-white">
 								Mentions légales
 							</Link>
