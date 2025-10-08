@@ -17,7 +17,7 @@
 			</div>
 		</div>
 
-		<section class="py-5 bg-light text-center">
+		<section class="py-5 text-center">
   <div class="container">
     <h2 class="mb-3">Choisissez la formule adaptée à votre projet</h2>
     <p class="mb-0">
@@ -26,116 +26,48 @@
   </div>
 </section>
 
-		<!-- Forfait Essentiel (image droite) -->
-  <section class="py-5">
+<section class="py-5 bg-light">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6 order-md-1">
-          <h2>Forfait Essentiel – Vitrine simple (1 à 5 pages)</h2>
-          <ul>
-            <li><strong>Contenu :</strong> Accueil, À propos, Services, Contact, Mentions légales</li>
-            <li><strong>Technos :</strong> Laravel + Vue 3</li>
-            <li><strong>Responsive :</strong> Oui (mobile/tablette/desktop)</li>
-            <li><strong>Sécurité :</strong> Base Laravel (CSRF, validation, etc.)</li>
-            <li><strong>Hébergement :</strong> Non inclus</li>
-            <li><strong>Durée estimée :</strong> ~15 heures</li>
-            <li><strong>Prix :</strong> 750 EUR TTC</li>
-          </ul>
+      <div class="d-flex flex-wrap">
+
+        <div class="col-12 col-md-6 p-4" v-for="forfait in forfaits">
+          <div class="card h-100 border-0 shadow-sm rounded-lg hover-shadow transition-all ">
+          <div class="card-body d-flex flex-column p-4 p-md-5">
+              <h3 class="card-title font-weight-bold h4 mb-3">{{forfait.nom}}</h3>
+              <p class="card-text text-muted mb-4">
+                  {{forfait.sous_titre}}
+              </p>
+              <div class="mb-4">
+                  <span class="h2 font-weight-bold">A partir de {{forfait.prix}}€</span>
+              </div>
+              <ul class="list-unstyled mb-5">
+                  <li class="d-flex align-items-start mb-3" v-for="(contenu, titre) in forfait.contenus">
+                      <svg class="bi bi-check-circle-fill text-primary mr-2 mt-1" width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                      </svg>
+                      <span>{{ Object.keys(contenu)[0] }}: {{ Object.values(contenu)[0] }}</span>
+                  </li>
+              </ul>
+              <div class="mt-auto pt-3">
+                  <a href="/contact" class="btn btn-outline-primary btn-block">Discuter de mon projet</a>
+              </div>
+          </div>
         </div>
-        <div class="col-md-6 order-md-2">
-          <img
-            src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80"
-            alt="Développement web simple"
-            class="img-fluid rounded shadow"
-          />
-        </div>
+      </div>
+
+
+
       </div>
     </div>
   </section>
 
-  <!-- Forfait Standard (image gauche) -->
-  <section class="py-5 bg-light">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6 order-md-2">
-          <h2>Forfait Standard – Vitrine étendue (6 à 10 pages)</h2>
-          <ul>
-            <li><strong>Contenu :</strong> Comme Essentiel + pages supplémentaires (équipe, portfolio…)</li>
-            <li><strong>Structure :</strong> Mise en page modulaire, sections réutilisables</li>
-            <li><strong>Design :</strong> CSS custom ou framework type bootstrap / Tailwind</li>
-            <li><strong>Durée estimée :</strong> ~25 heures</li>
-            <li><strong>Prix :</strong> 1 250 EUR TTC</li>
-          </ul>
-        </div>
-        <div class="col-md-6 order-md-1">
-          <img
-            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80"
-            alt="Web design étendu"
-            class="img-fluid rounded shadow"
-          />
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Forfait Dynamique (image droite) -->
-  <section class="py-5">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6 order-md-1">
-          <h2>Forfait Dynamique – Vitrine avec back-office simple (actualités)</h2>
-          <ul>
-            <li><strong>Contenu :</strong> Jusqu’à 10 pages</li>
-            <li><strong>Admin :</strong> Module actualités/blog (CRUD avec upload d’image)</li>
-            <li><strong>Sécurité :</strong> Authentification / rôles</li>
-            <li><strong>Technos :</strong> Laravel API + Vue 3 admin-panel</li>
-            <li><strong>Durée estimée :</strong> ~35 heures</li>
-            <li><strong>Prix :</strong> 1 750 EUR TTC</li>
-          </ul>
-        </div>
-        <div class="col-md-6 order-md-2">
-          <img
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80"
-            alt="Back-office et gestion"
-            class="img-fluid rounded shadow"
-          />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Forfait Sur-Mesure (image gauche) -->
-  <section class="py-5 bg-light">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6 order-md-2">
-          <h2>Forfait Sur-Mesure – Vitrine + back-office avancé</h2>
-          <ul>
-            <li><strong>Contenu :</strong> Jusqu’à 15 pages + modules dynamiques</li>
-            <li><strong>Admin :</strong> Actualités, galerie, témoignages, carte interactive, utilisateurs, filtres, statistiques…</li>
-            <li><strong>Sécurité :</strong> Auth avec rôles, validation, permissions</li>
-            <li><strong>Technos :</strong> Laravel backend + Vue 3 SPA ou Inertia</li>
-            <li><strong>Cartographie :</strong> VueLeaflet + données PostgreSQL (PostGIS)</li>
-            <li><strong>Durée estimée :</strong> ~50 heures</li>
-            <li><strong>Prix :</strong> 2 500 EUR TTC</li>
-          </ul>
-        </div>
-        <div class="col-md-6 order-md-1">
-          <img
-            src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=600&q=80"
-            alt="Développement sur-mesure"
-            class="img-fluid rounded shadow"
-          />
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Applications métiers / projets complexes (image gauche) -->
-  <section class="py-5 bg-vert">
+  <section class="py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/fond_noir_1.jpg') no-repeat center / cover fixed;">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-md-6 order-md-2">
+        <div class="col-md-6 order-md-2 text-white">
           <h2>Applications métiers / projets complexes : sur devis</h2>
           <p>
             Vous avez un besoin spécifique ou un outil métier à développer ? Je conçois des applications web sur mesure, connectées à vos données, adaptées à vos processus internes, souvent bien au-delà d’un simple site vitrine.
@@ -167,23 +99,37 @@
   <section class="py-5">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-md-6 order-md-1">
-          <h2>Options & Modules additionnels</h2>
-          <ul>
-            <li>Carte interactive (VueLeaflet + PostGIS) : à partir de 300 EUR</li>
-            <li>Authentification avancée (rôles + permissions) : 150 EUR</li>
-            <li>Import/Export CSV (backend Laravel) : 100 – 200 EUR</li>
-            <li>Site multilingue : 200 – 400 EUR</li>
-            <!-- <li>Maintenance mensuelle (correctifs & MAJ) : 50 EUR / mois</li> -->
-            <li>Hébergement géré (1 site/app) : à partir de 100 EUR / an</li>
-            <li>Formation à l’admin (1h visio + guide PDF) : 100 EUR</li>
-            <!-- <li>SEO technique (base) : 150 EUR</li> -->
-            <!-- <li>Rédaction de contenu : sur devis</li> -->
-          </ul>
+
+
+        <div class="col-12 col-md-6 order-md-1">
+          <div class="card h-100 border-0 shadow-sm rounded-lg hover-shadow transition-all ">
+          <div class="card-body d-flex flex-column p-4 p-md-5">
+              <h3 class="card-title font-weight-bold h4 mb-3">Options & Modules additionnels</h3>
+              <p class="card-text text-muted mb-4">
+                  <!-- {{forfait.sous_titre}} -->
+              </p>
+<!--               <div class="mb-4">
+                  <span class="h2 font-weight-bold">A partir de €</span>
+              </div> -->
+              <ul class="list-unstyled mb-5">
+                  <li class="d-flex align-items-start mb-3" v-for="contenu in options.contenus">
+                      <svg class="bi bi-check-circle-fill text-primary mr-2 mt-1" width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                      </svg>
+                      <span>{{contenu}}</span>
+                  </li>
+              </ul>
+<!--               <div class="mt-auto pt-3">
+                  <a href="/contact" class="btn btn-outline-primary btn-block">Discuter de mon projet</a>
+              </div> -->
+          </div>
         </div>
+      </div>
+
+
         <div class="col-md-6 order-md-2">
           <img
-            src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80"
+            src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=600&q=80"
             alt="Options et modules"
             class="img-fluid rounded shadow"
           />
@@ -197,5 +143,89 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import { Head, Link } from '@inertiajs/vue3';
+
+const options = ref({
+  contenus: [
+      'Carte interactive (VueLeaflet + PostGIS) : à partir de 300€',
+      'Authentification avancée (rôles + permissions) : 150€',
+      'Import/Export CSV (backend Laravel) : 100€ – 200€',
+      'Site multilingue : 200 – 400 EUR',
+      'Hébergement géré (1 site/app) : à partir de 120€ / an',
+      'Formation à l’admin (1h visio + guide PDF) : 100€',
+    ]
+})
+
+const forfaits = ref([
+  {
+    id: 1,
+    nom: 'Essentiel',
+    sous_titre: 'Vitrine simple (1 à 5 pages)',
+    prix: '750',
+    contenus: [
+      { Contenu: 'Accueil, À propos, Services, Contact, Mentions légales' },
+      { Technos: 'Laravel + Vue 3' },
+      { Responsive: 'Oui (mobile/tablette/desktop)' },
+      { Sécurité: 'Base Laravel (CSRF, validation, etc.)' },
+      { Hébergement: 'Non inclus' },
+      { 'Durée estimée': '~15 heures' },
+    ]
+  },
+  {
+    id: 2,
+    nom: 'Standard',
+    sous_titre: 'Vitrine étendue (6 à 10 pages)',
+    prix: '1250',
+    contenus: [
+      { Contenu: 'Comme Essentiel + pages supplémentaires (équipe, portfolio…)' },
+      { Structure: 'Mise en page modulaire, sections réutilisables' },
+      { Design: 'CSS custom ou framework type bootstrap / Tailwind' },
+      { 'Durée estimée': '~25 heures' },
+    ]
+  },
+
+  {
+    id: 3,
+    nom: 'Dynamique',
+    sous_titre: 'Vitrine avec back-office simple (actualités)',
+    prix: '1750',
+    contenus: [
+      { Contenu: 'Jusqu’à 10 pages' },
+      { Admin: 'Module actualités/blog (CRUD avec upload d’image)' },
+      { Sécurité : 'Authentification / rôles' },
+      { Technos : 'Laravel API + Vue 3 admin-panel' },
+      { 'Durée estimée': '~35 heures' },
+    ]
+  },
+
+  {
+    id: 3,
+    nom: 'Sur-Mesure',
+    sous_titre: 'Vitrine + back-office avancé',
+    prix: '2500',
+    contenus: [
+      { Contenu: ' Jusqu’à 15 pages + modules dynamiques' },
+      { Admin: 'Actualités, galerie, témoignages, carte interactive, utilisateurs, filtres, statistiques…' },
+      { Sécurité : 'Auth avec rôles, validation, permissions' },
+      { Technos : 'Laravel backend + Vue 3 SPA ou Inertia' },
+      { Cartographie  : 'VueLeaflet + données PostgreSQL (PostGIS)' },
+      { 'Durée estimée': '~35 heures' },
+    ]
+  }
+
+])
+
+
 </script>
+
+<style>
+.card {
+    transition: all 0.3s ease;
+}
+.card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+
+</style>

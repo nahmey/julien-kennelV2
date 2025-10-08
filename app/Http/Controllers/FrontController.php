@@ -83,24 +83,45 @@ class FrontController extends Controller
 
         $applications = [
             [
-                'nom' => 'Intranet - CENL',
-                // 'image' => 'images/realisations/intranet_cen.JPG',
+                'nom' => 'Extranet - CENL',
+                'nom_interne' => 'intranet',
                 'image' => 'images/realisations/intranet.PNG',
-                'description' => "Intranet du CEN Lorraine : annuaire, agenda partagé, chat, et accès aux diverses applications internes à l'association."
+                'images' => ['images/realisations/intranet.PNG', 'images/realisations/intranet_2.png', 'images/realisations/intranet_3.png'],
+                'description' => "Extranet du CEN Lorraine : annuaire, agenda partagé, chat, et accès aux diverses applications internes à l'association.",
+                'description_complete' => "<p>L’extranet est la porte d’entrée unique vers les différentes applications de l’entreprise.
+                Il permet aux salariés de se connecter facilement pour accéder à leur agenda personnel, consulter ceux de leurs collègues, organiser leur emploi du temps de manière collaborative, ou encore consulter l'annuaire de tous les salariés de l'entreprise.</p>
+
+                <p>Un agenda dédié à la réservation du matériel est également intégré, simplifiant la gestion et la disponibilité des ressources.</p>
+
+                <p>L’extranet propose en outre un fil d’actualité interne, favorisant la communication au sein de l’entreprise : chacun peut y publier des informations, annonces ou événements pour les partager avec l’ensemble de l’équipe.</p>
+
+                <p>Enfin, un système de rôles et de permissions assure une gestion fine des accès, permettant d’adapter les droits selon les responsabilités de chacun — qu’il s’agisse de la création d’utilisateurs, de la gestion du matériel ou d’autres fonctionnalités administratives.</p>"
             ],
             [
                 'nom' => 'Suivi des devis et factures - CENL',
+                'nom_interne' => 'devis_facture',
                 'image' => 'images/realisations/devis_factures.JPG',
+                'images' => [],
                 'description' => "Enregistrement, suivi, validation et édition (drag and drop de date, signature etc...) des devis et factures."
             ],
             [
                 'nom' => 'Application de congés - CENL',
+                'nom_interne' => 'conges',
                 'image' => 'images/realisations/conges_cen.JPG',
+                'images' => [],
                 'description' => "Logiciel de demandes, suivi et gestion des congés, avec système de validation hiérarchique."
             ],
+            // [
+            //     'nom' => 'Programmation - CENL',
+            //     'nom_interne' => 'programmation',
+            //     'image' => 'images/realisations/conges_cen.JPG',
+            //     'description' => "Logiciel de demandes, suivi et gestion des congés, avec système de validation hiérarchique."
+            // ],
             [
-                'nom' => 'Suivi de projet et suivi du temps de travail - CENL',
+                'nom' => 'Suivi de projet et du temps de travail - CENL',
+                'nom_interne' => 'temps_travail',
                 'image' => 'images/realisations/tps_cen.JPG',
+                'images' => [],
                 'description' => "Logiciel de programmation de projet, et suivi du temps de travail des salariès."
             ]
         ];

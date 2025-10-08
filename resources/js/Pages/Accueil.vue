@@ -33,7 +33,7 @@
 					</div>
 
 					<div class="col-12 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-3 mt-4 mt-md-0" >
-						<div class="feature-1 d-md-flex" v-for="(service, key) in services_col_2" :style="{background: key === 0 ? 'url(\'images/fond_noir_2.jpg\') center/cover no-repeat' : ''}">
+						<div class="feature-1 d-md-flex" v-for="(service, key) in services_col_2" :style="{background: key === 0 ? 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(\'images/fond_noir_1.jpg\') no-repeat center / cover' : ''}">
 							<div class="align-self-center">
 								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" :class="key === 0 ? service.icone + ' lucide mb-4 text-light' : service.icone + ' lucide mb-4'"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
 								<h3 :class="key === 0 ? 'text-light' : ''">{{service.titre}}</h3>
@@ -357,7 +357,7 @@ const getAvisGoogle = () =>
 	.then(response => response.data)
 	.then(data => {
 		avis_googles.value = data;
-		console.log(data);
+		// console.log(data);
 		// carousel_sites.value = data;
 	})
 	.catch((error) => {
