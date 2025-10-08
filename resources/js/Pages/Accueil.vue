@@ -10,9 +10,14 @@
 					<div class="col-lg-6 text-center">
 						<h2 class="section-title text-center mb-3">Mes Services</h2>
 						<p class="lead">Développeur Web depuis plus de 6 ans, je réalise pour vous des applications métier et sites internet sur mesure selon vos besoins.</p>
+						<div class="mt-auto">
+							<Link :href="route('a-propos')" class="btn btn-dark btn-block">
+								En découvrir plus sur moi
+							</Link>
+		              	</div>
 					</div>
 				</div>
-				<div class="row align-items-stretch">
+				<div class="row align-items-stretch pt-4">
 					<div class="col-lg-4 order-lg-1" data-aos="fade-up">
 						<div class="h-100">
 							<div class="frame h-100">
@@ -148,10 +153,10 @@
 				<div class="col-lg-7">
 					<h2 class="text-center text-white">Mes réalisations</h2>
 					<div class="mt-auto">
-		                  <Link :href="route('realisations')" class="btn btn-outline-light btn-block">
-		                    Découvrir toutes mes réalisations
-		                  </Link>
-		              </div>
+						<Link :href="route('realisations')" class="btn btn-outline-light btn-block">
+							Découvrir toutes mes réalisations
+						</Link>
+	              	</div>
 				</div>
 			</div>
 <!-- :autoplay="2000" -->

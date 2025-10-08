@@ -48,7 +48,7 @@
 			<div class="container">
 				<div class="site-navigation d-flex justify-content-between">
 					<Link :href="route('accueil')" class="logo m-0">
-						<img :src="base_url + '/images/logo/logo_jk_v1.png'" class="logo-navbar" /> Julien Kennel
+						<img :src="base_url + '/images/logo/logo_jk_v1.png'" class="logo-navbar mr-2" /> Julien Kennel
 					</Link>
 					<ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right mt-auto mb-auto">
 						<li :class="[(active_route === 'accueil' ? active_route_class : '')]">

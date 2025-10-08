@@ -3,12 +3,6 @@
 		<div class="mt-4">
 			<section class="untree_co-section pt-0 pb-0">
 				<div class="container">
-<!-- 					<div class="row mb-5 justify-content-center">
-						<div class="col-lg-6 text-center">
-							<h2 class="section-title text-center mb-3 text-white">{{application.nom}}</h2>
-						</div>
-					</div> -->
-
  					<div class="d-flex flex-wrap justify-content-between">
  						<!-- Colonne de gauche : Images -->
 					    <div class="project-images col-12 col-md-6 p-3">
@@ -21,30 +15,14 @@
 
 					    <!-- Colonne de droite : Description et fonctionnalités -->
 					    <div class="project-details col-12 col-md-6 p-3 d-flex flex-column">
-<!-- 					      <div class="project-tech mb-3 text-white">
-					      	techno
-					        <span v-for="tech in application.technologies" :key="tech" class="badge badge-secondary mr-1">
-					          {{ tech }}
-					        </span>
-					      </div> -->
 					      <span class="text-white" v-html="application.description_complete"></span>
 					</div>
-
-<!-- 						<div class="col-12 col-md-6">
-							<img :src="base_url + '/' + application.image" class="img-fluid" />
-						</div>
-
-						<div class="col-12 col-md-6">
-							<span v-html="application.description_complete"></span>
-						</div> -->
 					</div>
-
-					<!-- {{application}} -->
 				</div>
 			</section>
 			
 
-		    <section class="ftco-section">
+		    <section class="ftco-section pb-4">
 	    		<div class="col-md-12 text-right mt-4" @click.prevent="closeModal()">
 		    		<button class="btn btn-light">
 			    		<i class="fas fa-times-circle"></i> Fermer
