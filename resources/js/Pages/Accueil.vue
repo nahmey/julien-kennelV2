@@ -150,7 +150,8 @@
 				</div>
 			</div>
 <!-- :autoplay="2000" -->
-			<carousel 
+			<carousel
+			:touchDrag="false"
 			:breakpoints="{
 				700: {
 					itemsToShow: 1,
@@ -163,7 +164,7 @@
 			}"
 		    :wrap-around="true"  
 		    :transition="1500"
-		    :autoplay="10000">
+		    :autoplay="false">
 				<slide v-for="site in carousel_sites" :key="site.id">
 					<div class="item">
 						<a class="media-thumb m-1" :href="base_url + '/images/hero-slider-2.jpg'" data-fancybox="gallery">

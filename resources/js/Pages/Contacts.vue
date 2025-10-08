@@ -19,7 +19,7 @@
 
 		<div class="untree_co-section">
 			<div class="container">
-				<div class="row mb-5 justify-content-center">
+				<div class="row mb-0 mb-md-5 justify-content-center">
 					<div class="col-lg-6 text-center">
 						<h2 class="section-title text-center mb-3">Contactez-moi</h2>
 						<p class="lead text-center mb-5">
@@ -28,7 +28,7 @@
 					</div>
 				</div>
 				<div class="row align-items-stretch">
-					<div class="col-12 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-1">
+					<div class="col-12 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-1 mb-4">
 						<div class="feature-1 d-md-flex mb-4 h-100">
 							<div class="align-self-center">
 								<svg xmlns="http://www.w3.org/2000/svg" 
@@ -49,9 +49,9 @@
 					</div>
 
 					<!-- Email -->
-					<div class="col-12 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-1">
-						<div class="feature-1 d-md-flex mb-4 h-100">
-							<div class="align-self-center">
+					<div class="col-12 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-1 mb-4">
+						<div class="feature-1 d-md-flex mb-4 h-100" style="background: url('images/fond_noir_1.jpg') no-repeat center / cover;">
+							<div class="align-self-center text-white">
 								<svg xmlns="http://www.w3.org/2000/svg" 
 								width="24" height="24" viewBox="0 0 24 24" fill="none" 
 								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
@@ -59,14 +59,14 @@
 								<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
 								<polyline points="22,6 12,13 2,6"/>
 								</svg>
-								<h3>Email</h3>
-								<p class="mb-0"><a href="mailto:kennel.julien@gmail.com" class="text-decoration-none">kennel.julien@gmail.com</a></p>
+								<h3 class="text-white">Email</h3>
+								<p class="mb-0"><a href="mailto:kennel.julien@gmail.com" class="text-decoration-none text-white">kennel.julien@gmail.com</a></p>
 							</div>
 						</div>
 					</div>
 
 					<!-- Adresse -->
-					<div class="col-12 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-1">
+					<div class="col-12 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-1 mb-4">
 					<div class="feature-1 d-md-flex mb-4 h-100">
 					<div class="align-self-center">
 					<svg xmlns="http://www.w3.org/2000/svg" 

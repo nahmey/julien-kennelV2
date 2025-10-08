@@ -33,9 +33,9 @@
 							<h3 class="heading">Pages</h3>
 							<div class="d-flex flex-wrap">
 								<ul class="links list-unstyled">
-									<li class="pr-0 pr-md-4"><Link :href="route('accueil')">Accueil</Link></li>
-									<li class="pr-0 pr-md-4"><Link :href="route('realisations')">Réalisations</Link></li>
-									<li class="pr-0 pr-md-4"><Link :href="route('technologies')">Technologies</Link></li>
+									<li class="pr-4"><Link :href="route('accueil')">Accueil</Link></li>
+									<li class="pr-4"><Link :href="route('realisations')">Réalisations</Link></li>
+									<li class="pr-4"><Link :href="route('technologies')">Technologies</Link></li>
 								</ul>
 								<ul class="links list-unstyled">
 									<li><Link :href="route('tarifs')">Tarifs</Link></li>
@@ -67,11 +67,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
 
-
-
-		<div class="inner dark">
 			<div class="container">
 				<div class="row text-center">
 					<div class="col-md-8 mb-3 mb-md-0 mx-auto">
@@ -87,6 +83,25 @@
 				</div>
 			</div>
 		</div>
+
+
+
+<!-- 		<div class="inner dark">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-md-8 mb-3 mb-md-0 mx-auto">
+						<p>Copyright © {{dayjs().format('YYYY')}}. Tous droits réservés. - 
+							<Link :href="route('mentions_legales')" class="link-highlight text-white">
+								Mentions légales
+							</Link>
+						</p>
+						<p>Copyright ©<script>document.write(new Date().getFullYear());</script>2025. All Rights Reserved. — Designed with love by <a href="https://untree.co" class="link-highlight">Untree.co</a>Distributed By <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+						</p>
+					</div>
+					
+				</div>
+			</div>
+		</div> -->
 	</div>
 </template>
 
