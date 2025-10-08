@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Head title="Tarifs – Création de site et application | Julien Kennel" />
+		<Head title="Tarifs | Création de site internet et logiciels | Julien Kennel" />
 
 		<div class="hero hero-inner" style="background: url('images/fond_noir_2.jpg') center/cover no-repeat fixed;">
 			<div class="container">
@@ -30,7 +30,7 @@
     <div class="container">
       <div class="d-flex flex-wrap">
 
-        <div class="col-12 col-md-6 p-4" v-for="forfait in forfaits">
+        <div class="col-12 col-md-6 p-4" v-for="forfait in forfaits" data-aos="fade-up">
           <div class="card h-100 border-0 shadow-sm rounded-lg hover-shadow transition-all ">
           <div class="card-body d-flex flex-column p-4 p-md-5">
               <h3 class="card-title font-weight-bold h4 mb-3">{{forfait.nom}}</h3>
@@ -49,7 +49,9 @@
                   </li>
               </ul>
               <div class="mt-auto pt-3">
-                  <a href="/contact" class="btn btn-outline-primary btn-block">Discuter de mon projet</a>
+                  <Link :href="route('contacts')" class="btn btn-outline-dark btn-block">
+                    Discuter de mon projet
+                  </Link>
               </div>
           </div>
         </div>
@@ -66,7 +68,7 @@
   <!-- Applications métiers / projets complexes (image gauche) -->
   <section class="py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/fond_noir_1.jpg') no-repeat center / cover fixed;">
     <div class="container">
-      <div class="row align-items-center">
+      <div class="row align-items-center" data-aos="fade-up">
         <div class="col-md-6 order-md-2 text-white">
           <h2>Applications métiers / projets complexes : sur devis</h2>
           <p>
@@ -86,7 +88,7 @@
         </div>
         <div class="col-md-6 order-md-1">
           <img
-            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80"
+            :src="base_url + '/images/computer_4_bis.jpg'"
             alt="Projets complexes et applications métiers"
             class="img-fluid rounded shadow"
           />
@@ -98,7 +100,7 @@
   <!-- Options & Modules additionnels (image droite) -->
   <section class="py-5">
     <div class="container">
-      <div class="row align-items-center">
+      <div class="row align-items-center" data-aos="fade-up">
 
 
         <div class="col-12 col-md-6 order-md-1">
@@ -143,8 +145,10 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, inject } from 'vue';
 import { Head, Link } from '@inertiajs/vue3';
+
+const base_url = inject('base_url')
 
 const options = ref({
   contenus: [

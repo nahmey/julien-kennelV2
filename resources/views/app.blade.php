@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="author" content="Julien Kennel">
-        <link rel="shortcut icon" type="image/png" href="{{asset('images/ico.png')}}"/>
+        <link rel="shortcut icon" type="image/png" href="{{asset('images/logo/logo_jk_v1.png')}}"/>
 
         <meta name="description" content="Julien Kennel, développeur web à Saverne dans le Bas-Rhin, création de sites internet et d'applications métiers sur mesure, modernes et performants.">
 
@@ -13,9 +13,11 @@
 
         <meta name="robots" content="index, follow, max-image-preview:large">
 
+        <meta property="og:locale" content="fr_FR">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Julien Kennel, développeur web à Saverne dans le Bas-Rhin">
         <meta property="og:site_name" content="Julien Kennel">
         <meta property="og:url" content="https://julien-kennel.fr">
-        <meta property="og:locale" content="fr_FR">
         <meta property="og:description" content="Julien Kennel, développeur web, création de site internet, développement d'applications métiers, logiciels sur mesure, applications web, Saverne, Strasbourg, Bas-Rhin">
 
         <link rel="canonical" href="https://julien-kennel.fr">

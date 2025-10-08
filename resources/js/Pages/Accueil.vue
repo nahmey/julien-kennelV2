@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Head title="Julien Kennel – Développeur web à Saverne (Bas-Rhin)" />
+		<Head title="Julien Kennel | Développeur web à Saverne | Création de site internet" />
 
 		<TypingEffect :base_url="base_url" />
 
@@ -13,7 +13,7 @@
 					</div>
 				</div>
 				<div class="row align-items-stretch">
-					<div class="col-lg-4 order-lg-1">
+					<div class="col-lg-4 order-lg-1" data-aos="fade-up">
 						<div class="h-100">
 							<div class="frame h-100">
 								<div class="feature-img-bg h-100" style="background-image: url('images/computer_4_bis.jpg');">
@@ -23,7 +23,7 @@
 					</div>
 
 					<div class="col-12 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-1" >
-						<div class="feature-1 d-md-flex" v-for="service in services_col_1">
+						<div class="feature-1 d-md-flex" v-for="service in services_col_1" data-aos="fade-up">
 							<div class="align-self-center">
 								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" :class="service.icone + ' lucide mb-4'"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
 								<h3>{{service.titre}}</h3>
@@ -33,7 +33,7 @@
 					</div>
 
 					<div class="col-12 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-3 mt-4 mt-md-0" >
-						<div class="feature-1 d-md-flex" v-for="(service, key) in services_col_2" :style="{background: key === 0 ? 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(\'images/fond_noir_1.jpg\') no-repeat center / cover' : ''}">
+						<div class="feature-1 d-md-flex" v-for="(service, key) in services_col_2" :style="{background: key === 0 ? 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(\'images/fond_noir_1.jpg\') no-repeat center / cover' : ''}" data-aos="fade-up">
 							<div class="align-self-center">
 								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" :class="key === 0 ? service.icone + ' lucide mb-4 text-light' : service.icone + ' lucide mb-4'"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
 								<h3 :class="key === 0 ? 'text-light' : ''">{{service.titre}}</h3>
@@ -143,10 +143,15 @@
 
 
 	<div class="cta-section p-4" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/fond_noir_1.jpg') no-repeat center / cover fixed;">
-		<div class="container p-4">
+		<div class="container p-4" data-aos="fade-up">
 			<div class="row text-center justify-content-center mb-5">
 				<div class="col-lg-7">
 					<h2 class="text-center text-white">Mes réalisations</h2>
+					<div class="mt-auto">
+		                  <Link :href="route('realisations')" class="btn btn-outline-light btn-block">
+		                    Découvrir toutes mes réalisations
+		                  </Link>
+		              </div>
 				</div>
 			</div>
 <!-- :autoplay="2000" -->
@@ -164,7 +169,7 @@
 			}"
 		    :wrap-around="true"  
 		    :transition="1500"
-		    :autoplay="false">
+		    :autoplay="10000">
 				<slide v-for="site in carousel_sites" :key="site.id">
 					<div class="item">
 						<a class="media-thumb m-1" :href="base_url + '/images/hero-slider-2.jpg'" data-fancybox="gallery">
@@ -224,7 +229,7 @@
 	<div class="untree_co-section testimonial-section" >
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="col-lg-7 text-center">
+				<div class="col-lg-7 text-center" data-aos="fade-up">
 					<h2 class="section-title text-center mb-5">Avis google</h2>
 
 					<carousel :items-to-show="1" :wrap-around="true"  :transition="1500" :autoplay="10000">
@@ -324,7 +329,7 @@ const services_col_1 = [
 		},
 		{
 			titre: 'Bases de données',
-			description: 'Vous avez besoin de créer ou gérer votre base de données ? Mon expérience en SQL sont là pour y répondre.',
+			description: 'Vous avez besoin de concevoir ou gérer votre base de données ? Mon expérience en SQL sont là pour y répondre.',
 			icon: 'lucide-database'
 		}
 	]
@@ -332,7 +337,7 @@ const services_col_1 = [
 	const services_col_2 = [
 		{
 			titre: 'Sites internet',
-			description: "Besoin d'un site internet rapide, éfficace et moderne pour montrer votre visibilité ? Je suis là pour vous apporter toute mon expérience.",
+			description: "Besoin de créer un site internet rapide, éfficace et moderne pour montrer votre visibilité ? Je suis là pour vous apporter toute mon expérience.",
 			icon: 'lucide-panels-top-left'
 		},
 	]

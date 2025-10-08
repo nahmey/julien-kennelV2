@@ -13,10 +13,18 @@ import { ZiggyVue } from '../../vendor/tightenco/ziggy';
 import { router } from '@inertiajs/vue3'
 
 import Layout from '@/Layout.vue';
-// import helpers from '@/helpers';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 const base_url = import.meta.env.VITE_BASE_URL;
+
+AOS.init({
+    duration: 1000,
+    easing: "ease",
+    once: true, // whether animation should happen only once - while scrolling down
+});
 
 createInertiaApp({
 	resolve: name => {

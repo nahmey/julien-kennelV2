@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Head title="Réalisations – Sites web et applications | Julien Kennel" />
+		<Head title="Réalisations | Sites internet et logiciels métier | Julien Kennel" />
 
 		<div class="hero hero-inner pb-0" style="background: url('images/fond_noir_2.jpg') center/cover no-repeat fixed;">
 			<div class="container">

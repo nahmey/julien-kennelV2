@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Head title="Contact – Julien Kennel, création de site web à Saverne" />
+		<Head title="Contact | Julien Kennel, création de site web à Saverne" />
 
 		<div class="hero hero-inner" style="background: url('images/fond_noir_2.jpg') center/cover no-repeat fixed;">
 			<div class="container">

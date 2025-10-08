@@ -28,7 +28,7 @@
 	</section>
 	<section class="untree_co-section pt-2">
 		<!-- <div class="container"> -->
-			<div class="tab-content">
+			<div class="tab-content" data-aos="fade-up">
 				<!-- On encapsule tout dans un seul div -->
 				<transition name="fade" mode="out-in">
 					<div :key="activeTab">

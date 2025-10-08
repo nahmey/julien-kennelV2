@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Head title="Technologies – Julien Kennel, développeur web freelance" />
+		<Head title="Technologies | Julien Kennel, développeur web freelance" />
 
 		<div class="hero hero-inner" style="background: url('images/fond_noir_1.jpg') center/cover no-repeat fixed;">
 			<div class="container">
@@ -17,7 +17,7 @@
 			</div>
 		</div>
 
-		<div class="untree_co-section bg-light">
+		<div class="untree_co-section bg-light" data-aos="fade-up">
 			<div class="container">
 				<!-- <h2 class="mb-5">Frameworks</h2> -->
 				<div class="d-flex flex-wrap justify-content-between">

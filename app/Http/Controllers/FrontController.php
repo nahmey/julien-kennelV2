@@ -111,12 +111,12 @@ class FrontController extends Controller
                 'images' => [],
                 'description' => "Logiciel de demandes, suivi et gestion des congés, avec système de validation hiérarchique."
             ],
-            // [
-            //     'nom' => 'Programmation - CENL',
-            //     'nom_interne' => 'programmation',
-            //     'image' => 'images/realisations/conges_cen.JPG',
-            //     'description' => "Logiciel de demandes, suivi et gestion des congés, avec système de validation hiérarchique."
-            // ],
+            [
+                'nom' => 'Programmation - CENL',
+                'nom_interne' => 'programmation',
+                'image' => 'images/realisations/conges_cen.JPG',
+                'description' => "Logiciel de demandes, suivi et gestion des congés, avec système de validation hiérarchique."
+            ],
             [
                 'nom' => 'Suivi de projet et du temps de travail - CENL',
                 'nom_interne' => 'temps_travail',
