@@ -15,7 +15,7 @@
 
 					    <!-- Colonne de droite : Description et fonctionnalités -->
 					    <div class="project-details col-12 col-md-6 p-3 d-flex flex-column">
-					      <span class="text-white" v-html="application.description_complete"></span>
+					      <span class="text-white txt-info-app" v-html="application.description_complete"></span>
 					</div>
 					</div>
 				</div>

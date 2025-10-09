@@ -249,7 +249,7 @@ onBeforeUnmount(() => {
   background: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
-  padding: 15px 20px;
+  padding: 10px 20px;
   cursor: pointer;
   font-size: 24px;
   border-radius: 50%;

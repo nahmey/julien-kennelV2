@@ -18,36 +18,19 @@
 				<Tabs :tabs="myTabs" default-tab="tous">
 					<template #tous>
 						<h2 class="mb-4 text-white">Toutes mes réalisations</h2>
-						<RealisationSites :chunkedSites="chunkedSites" />
-						<RealisationApplications :chunkedApps="chunkedApps"/>
+						<RealisationsComponent :chunked="chunkedAll" />
 					</template>
 					<template #site_web>
 						<h2 class="mb-4 text-white">Sites web</h2>
-						<RealisationSites :chunkedSites="chunkedSites" />
+						<RealisationsComponent :chunked="chunkedSites" />
 					</template>
 					<template #application>
 						<h2 class="mb-4 text-white">Logiciels métier</h2>
-						<RealisationApplications :chunkedApps="chunkedApps"/>
+						<RealisationsComponent :chunked="chunkedApps"/>
 					</template>
 				</Tabs>
 			</div>
 		</div>
-
-		<!-- <Tabs :tabs="myTabs" default-tab="tous">
-			<template #tous>
-				<h2 class="mb-4">Toutes mes réalisations</h2>
-				<RealisationSites :chunkedSites="chunkedSites" />
-				<RealisationApplications :chunkedApps="chunkedApps"/>
-			</template>
-			<template #site_web>
-				<h2 class="mb-4">Sites web</h2>
-				<RealisationSites :chunkedSites="chunkedSites" />
-			</template>
-			<template #application>
-				<h2>Logiciels métier</h2>
-				<RealisationApplications :chunkedApps="chunkedApps"/>
-			</template>
-		</Tabs> -->
 	</div>
 </template>
 
@@ -55,8 +38,7 @@
 import { inject, computed } from 'vue';
 import { Head, Link } from '@inertiajs/vue3';
 import Tabs from '@/Components/TabsComponent.vue';
-import RealisationSites from '@/Components/RealisationSites.vue';
-import RealisationApplications from '@/Components/RealisationApplications.vue'
+import RealisationsComponent from '@/Components/RealisationsComponent.vue'
 
 const props = defineProps(['sites', 'applications']);
 
@@ -83,6 +65,23 @@ const chunkedApps = computed(() => {
     }
     return result;
 });
+
+const chunkedAll = computed(() => {
+    // 1. Fusionner les deux tableaux
+    const merged = [...props.sites, ...props.applications];
+
+    // 2. Trier par id (suppose que chaque élément a un champ `id`)
+    merged.sort((a, b) => a.id - b.id);
+
+    // 3. Regrouper par paires
+    const result = [];
+    for (let i = 0; i < merged.length; i += 2) {
+        result.push(merged.slice(i, i + 2));
+    }
+
+    return result;
+});
+
 </script>
 
 <style>
@@ -91,6 +90,7 @@ const chunkedApps = computed(() => {
     overflow: hidden;
     border-radius: 8px;
     transition: transform 0.3s ease; /* Animation pour le zoom */
+    height: 350px!important;
 }
 
 .gal-item::before {

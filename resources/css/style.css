@@ -1774,3 +1774,21 @@ body, html, h1, .h1, h2, .h2, h3, .h3, h4, .h4{
         font-size: 20px; 
       }
 }
+
+.card {
+  transition: all 0.3s ease;
+}
+.card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.txt-info-app{
+  font-size: 0.95rem;
+}
+
+/* Pour modal */
+.vfm__content.vfm--outline-none{
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
