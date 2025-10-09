@@ -86,19 +86,7 @@ const chunkedAll = computed(() => {
 </script>
 
 <style>
-.hero {
-    position: relative;
-    min-height: 100vh;
-  }
-  .bg-fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('images/fond_noir_2.jpg') center/cover no-repeat;
-    /*z-index: -1;*/
-  }
+
 
 .gal-item {
     position: relative;
