@@ -1795,14 +1795,41 @@ body, html, h1, .h1, h2, .h2, h3, .h3, h4, .h4{
 
 .hero {
     position: relative;
-    min-height: 100vh;
+    background-color: transparent!important;
+    /*min-height: 100vh;*/
   }
-  .bg-fixed {
+  .bg-fixed-fond-2 {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: url('../images/fond_noir_2.jpg') center/cover no-repeat;
-    /*z-index: -1;*/
+    z-index: -1;
+  }
+  .bg-fixed-fond-1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 7rem 0rem 10rem 0rem;
+    background: url('../images/fond_noir_1.jpg') center/cover no-repeat;
+    z-index: -1;
+  }
+
+  .bg-fixed-fond-1-sombre {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 7rem 0rem 10rem 0rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/fond_noir_1.jpg') no-repeat center / cover fixed;
+    z-index: -1;
+  }
+
+  .untree_co-section-accueil{
+    padding-top: 100px!important;
+    margin-top: -100px!important;
   }

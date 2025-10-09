@@ -4,7 +4,7 @@
 
 		<TypingEffect :base_url="base_url" />
 
-		<section class="untree_co-section pt-0">
+		<section class="untree_co-section untree_co-section-accueil pt-0 bg-white">
 			<div class="container">
 				<div class="row mb-5 justify-content-center">
 					<div class="col-lg-6 text-center">
@@ -17,7 +17,7 @@
 		              	</div>
 					</div>
 				</div>
-				<div class="row align-items-stretch pt-4">
+				<div class="row align-items-stretch pt-4 bg-white">
 					<div class="col-lg-4 order-lg-1" data-aos="fade-up">
 						<div class="h-100">
 							<div class="frame h-100">
@@ -59,7 +59,7 @@
 			</div>
 		</section>
 
-		<section class="untree_co-section count-numbers py-5">
+		<section class="untree_co-section count-numbers py-5 bg-white">
 			<div class="container">
 				<div class="row d-flex justify-content-between w-100 text-center">
 					<!-- Compteur 1 -->

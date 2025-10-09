@@ -1,6 +1,7 @@
 <template>
 	<!-- subtle-digital-pattern.jpg -->
-	<div class="hero" style="background: url('images/fond_noir_1.jpg') center/cover no-repeat fixed;">
+	<div class="hero">
+		<div class="bg-fixed-fond-1"></div>
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-7">

@@ -2,7 +2,8 @@
 	<div>
 		<Head title="Technologies | Julien Kennel, développeur web freelance" />
 
-		<div class="hero hero-inner" style="background: url('images/fond_noir_1.jpg') center/cover no-repeat fixed;">
+		<div class="hero hero-inner">
+			<div class="bg-fixed-fond-1"></div>
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-lg-6 mx-auto text-center">
@@ -17,8 +18,8 @@
 			</div>
 		</div>
 
-		<div class="untree_co-section bg-light" data-aos="fade-up">
-			<div class="container">
+		<div class="untree_co-section bg-light">
+			<div class="container"  data-aos="fade-up">
 				<!-- <h2 class="mb-5">Frameworks</h2> -->
 				<div class="d-flex flex-wrap justify-content-between">
 					<div class="row col-12 col-md-6">

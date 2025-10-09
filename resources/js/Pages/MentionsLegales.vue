@@ -1,6 +1,7 @@
 <template>
 	<div>
-		<div class="hero hero-inner" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/fond_noir_2.jpg') no-repeat center / cover fixed;">
+		<div class="hero hero-inner pb-4">
+			<div class="bg-fixed-fond-2"></div>
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-lg-6 mx-auto text-center">
@@ -15,7 +16,7 @@
 			</div>
 		</div>
 
-		<div class="container">
+		<div class="container bg-white card mb-4">
 			<div class="card-body">
 				<h1 class="mb-2">Mentions légales </h1>
 				<p>
