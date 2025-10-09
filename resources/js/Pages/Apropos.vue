@@ -2,8 +2,7 @@
 	<div>
 		<Head title="À propos | Julien Kennel, développeur web freelance à Saverne" />
 
-		<div class="hero hero-inner pb-0">
-			<div class="bg-fixed-fond-1"></div>
+		<div class="hero hero-inner pb-0" style="background: url('images/fond_noir_1.jpg') center/cover no-repeat fixed;">
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-lg-6 mx-auto text-center mb-4 pb-4">

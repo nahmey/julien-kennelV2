@@ -2,8 +2,7 @@
 	<div>
 		<Head title="Réalisations | Sites internet et logiciels métier | Julien Kennel" />
 
-		<div class="hero hero-inner pb-0">
-            <div class="bg-fixed-fond-2"></div>
+		<div class="hero hero-inner pb-0" style="background: url('images/fond_noir_2.jpg') center/cover no-repeat fixed;">
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-lg-6 mx-auto text-center">
@@ -86,8 +85,6 @@ const chunkedAll = computed(() => {
 </script>
 
 <style>
-
-
 .gal-item {
     position: relative;
     overflow: hidden;

@@ -2,8 +2,7 @@
 	<div>
 		<Head title="Tarifs | Création de site internet et logiciels | Julien Kennel" />
 
-		<div class="hero hero-inner">
-			<div class="bg-fixed-fond-2"></div>
+		<div class="hero hero-inner" style="background: url('images/fond_noir_2.jpg') center/cover no-repeat fixed;">
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-lg-6 mx-auto text-center">
@@ -18,7 +17,7 @@
 			</div>
 		</div>
 
-		<section class="py-5 text-center bg-white">
+		<section class="py-5 text-center">
 			<div class="container">
 				<h2 class="mb-3">Choisissez la formule adaptée à votre projet</h2>
 				<p class="mb-0">
@@ -89,7 +88,7 @@
 			</div>
 		</section>
 
-		<section class="py-5 bg-white">
+		<section class="py-5">
 			<div class="container">
 				<div class="d-flex flex-wrap" data-aos="fade-up">
 					<div class="col-12 col-md-6 order-md-1">
