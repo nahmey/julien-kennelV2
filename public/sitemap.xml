@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>https://julien-kennel.fr/</loc>
+      <priority>1.00</priority>
+   </url>
+   <url>
+      <loc>https://julien-kennel.fr/accueil</loc>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://julien-kennel.fr/realisations</loc>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://julien-kennel.fr/technologies</loc>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://julien-kennel.fr/tarifs</loc>
+      <priority>0.50</priority>
+   </url>
+   <url>
+      <loc>https://julien-kennel.fr/a-propos</loc>
+      <priority>0.50</priority>
+   </url>
+   <url>
+      <loc>https://julien-kennel.fr/contacts</loc>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://julien-kennel.fr/mentions-legales</loc>
+      <priority>0.50</priority>
+   </url>
+</urlset>

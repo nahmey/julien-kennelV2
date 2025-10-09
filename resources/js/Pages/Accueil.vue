@@ -174,7 +174,8 @@
 			}"
 		    :wrap-around="true"  
 		    :transition="1500"
-		    :autoplay="10000">
+		    :autoplay="10000"
+		    >
 				<slide v-for="site in carousel_sites" :key="site.id">
 					<div class="item">
 						<a class="media-thumb m-1" :href="base_url + '/images/hero-slider-2.jpg'" data-fancybox="gallery">
@@ -182,7 +183,10 @@
 								<h3>{{site.titre}}</h3>
 								<span class="location">Consulter</span>
 							</div>
-							<img :src="base_url + site.src" alt="Image" class="img-fluid" />
+							<div :style="'background: linear-gradient(rgba(0, 0, 0, 0.8) 0%,rgba(0, 0, 0, 0.1) 50%,rgba(0, 0, 0, 0.0) 100%), url('+base_url + site.src+') no-repeat center / cover fixed;height: 400px;width: 300px'">
+
+							</div>
+							<!-- <img :src="base_url + site.src" alt="Image" class="img-fluid" /> -->
 						</a>
 					</div>
 				</slide>

@@ -61,7 +61,7 @@
 							<ul class="list-unstyled quick-info links">
 								<li class="email"><a href="mailto:kennel.julien@gmail.com">kennel.julien@gmail.com</a></li>
 								<li class="phone"><a href="tel:0674118211">06.74.11.82.11</a></li>
-								<li class="address"><a href="#">3 Passage Achille Demange 67700 SAVERNE</a></li>
+								<li class="address">3 Passage Achille Demange 67700 SAVERNE</li>
 							</ul>
 						</div>
 					</div>

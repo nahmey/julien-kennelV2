@@ -219,27 +219,34 @@ class FrontController extends Controller
         $data = [
             [
                 "id" => 1,
+                "src" => "/images/realisations/gorna.png",
+                "titre" => "Gorna",
+                "sous_titre" => "sous_titre",
+                "lien" => "lien"
+            ],
+            [
+                'id'=> 2,
+                'src' => '/images/realisations/eee.png',
+                'titre' => 'EEE Grand Est',
+                "sous_titre" => "sous_titre",
+                "lien" => "https://eee-grandest.fr/"
+            ],
+            [
+                "id" => 3,
                 "src" => "/images/site_cenl/site_cenl_1.JPG",
                 "titre" => "Site internet du CEN Lorraine",
                 "sous_titre" => "sous_titre",
                 "lien" => "lien"
             ],
             [
-                "id" => 2,
-                "src" => "/images/site_pole_gestion/site_pole_gestion_1.JPG",
-                "titre" => "Site internet du Pôle gestion",
-                "sous_titre" => "sous_titre",
-                "lien" => "lien"
-            ],
-            [
-                "id" => 3,
+                "id" => 4,
                 "src" => "/images/site_kuntz_ramonage/site_kuntz_ramonage_1.JPG",
                 "titre" => "Site internet Kuntz Ramonage",
                 "sous_titre" => "sous_titre",
                 "lien" => "lien"
             ],
             [
-                "id" => 4,
+                "id" => 5,
                 "src" => "/images/site_pram/1.JPG",
                 "titre" => "Site internet du PRAM",
                 "sous_titre" => "sous_titre",
