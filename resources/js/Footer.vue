@@ -14,14 +14,14 @@
 								<!-- <li><a href="#"><span class="icon-instagram"></span></a></li> -->
 								<!-- <li><a href="#"><span class="icon-facebook"></span></a></li> -->
 								<li>
-									<a href="https://www.linkedin.com/in/julien-kennel-814886160/" target="_blank" class="mr-2">
+									<a href="https://www.linkedin.com/in/julien-kennel-814886160/" target="_blank" class="mr-2" aria-label="Lien vers le linkedin de Julien kennel">
 										<span class="icon-linkedin"></span>
 									</a>
 								</li>
 								<!-- <li><a href="#"><span class="icon-dribbble"></span></a></li> -->
 								<!-- <li><a href="#"><span class="icon-pinterest"></span></a></li> -->
 								<li>
-									<a href="https://github.com/nahmey" target="_blank">
+									<a href="https://github.com/nahmey" target="_blank" aria-label="Lien vers le github de Julien Kennel">
 										<span class="icon-github"></span>
 									</a>
 								</li>

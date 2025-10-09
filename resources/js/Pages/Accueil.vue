@@ -94,225 +94,91 @@
 			</div>
 		</section>
 
-
-
-<!-- 	<div class="cta-section">
-		<div class="container">
-			<div class="row d-flex flex-wrap w-100 justify-content-between">
-				<div>
-					<img :src="base_url + '/images/site_cenl/site_cenl_1.JPG'" alt="Image" class="img-fluid" style="width: 400px; height: 420px;" />
+		<section class="cta-section p-4" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/fond_noir_1.jpg') no-repeat center / cover fixed;">
+			<div class="container p-4" data-aos="fade-up">
+				<div class="row text-center justify-content-center mb-5">
+					<div class="col-lg-7">
+						<h2 class="text-center text-white">Mes réalisations</h2>
+						<div class="mt-auto">
+							<Link :href="route('realisations')" class="btn btn-outline-light btn-block">
+								Découvrir toutes mes réalisations
+							</Link>
+		              	</div>
+					</div>
 				</div>
 
-				<div class="frame h-100">
-					<div class="feature-img-bg h-100" style="background-image: url('images/computer_4_bis.jpg');width: 400px; height: 420px;"></div>
-				</div>
-
-				<div class="text-center h-100">
-						<div class="KS5 jzS mQ8 un8 C9i TB_" style="height: 50%; width: 100%;">
-							<div class="X8m zDA IZT tBJ dyH iFc sAJ swG">
-								<div class="zI7 iyn Hsu" style="font-size: 60px; color: rgb(195, 25, 82); font-weight: bold;">
-									Mes réalisations
+				<carousel
+				:touchDrag="false"
+				:breakpoints="{
+					700: {
+						itemsToShow: 1,
+						snapAlign: 'center',
+					},
+					1000: {
+						itemsToShow: 3,
+						snapAlign: 'start',
+					}
+				}"
+			    :wrap-around="true"  
+			    :transition="1500"
+			    :autoplay="10000"
+			    >
+					<slide v-for="site in carousel_sites" :key="site.id">
+						<div class="item">
+							<a class="media-thumb m-1" :href="base_url + '/images/hero-slider-2.jpg'" data-fancybox="gallery">
+								<div class="media-text text-left">
+									<h3>{{site.titre}}</h3>
+									<span class="location">Consulter</span>
 								</div>
-							</div>
+								<div :style="'background: linear-gradient(rgba(0, 0, 0, 0.8) 0%,rgba(0, 0, 0, 0.1) 50%,rgba(0, 0, 0, 0.0) 100%), url('+base_url + site.src+') no-repeat center / cover fixed;height: 400px;width: 300px'">
 
-							<div class="X8m zDA IZT tBJ dyH iFc sAJ swG">
-								<div class="tNl zI7 iyn Hsu" style="font-size: 24px; color: rgb(195, 25, 82); text-align: center; max-width: 400px;">Que souhaitez-vous tester ensuite&nbsp;? Pensez à quelque chose que vous appréciez, par exemple «&nbsp;repas facile poulet&nbsp;», et voyez les résultats.
 								</div>
-							</div>
+							</a>
+						</div>
+					</slide>
 
-							<div class="Jea KS5 i1W jX8 mQ8 wOW zI7 iyn Hsu">
-								<a aria-label="Explorer" class="nrl _74 NtY S9z Lfz CCY DyB mQ8 KS5 RCK Hsu USg adn F10 xD4 i1W V92 Il7" data-test-id="explore-button-search" href="/ideas/cuisine-et-boissons/931387085757/" rel="" tabindex="0">
-									<div class="KS5 hs0 mQ8 un8 b23 TB_">
-										<div class="xuA">
-											<div class="B1n tg7 tBJ dyH iFc sAJ H2s">Explorer
-											</div>
-										</div>
+					<template #addons>
+						<navigation />
+						<div class="pt-50px">
+							<pagination class="pagintation-realisations" />
+						</div>
+					</template>
+				 </carousel>
+			</div>
+		</section>
+
+		<section class="untree_co-section testimonial-section" >
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-7 text-center" data-aos="fade-up">
+						<h2 class="section-title text-center mb-5">Avis google</h2>
+
+						<carousel :items-to-show="1" :wrap-around="true"  :transition="1500" :autoplay="10000">
+							<slide v-for="avis in avis_googles" :key="avis.id">
+								<div class="item">
+									<div class="testimonial mx-auto">
+										<figure class="img-wrap">
+											<img :src="avis.avatar" alt="Avatar Image" class="img-fluid">
+										</figure>
+										<h3 class="name">{{avis.prenom}} {{avis.nom}}</h3>
+										<blockquote>
+											<p>&ldquo;{{avis.avis}}&rdquo;</p>
+										</blockquote>
 									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-			</div>
-		</div>
-	</div> -->
-
-	<!-- <Test /> -->
-
-
-
-
-
-
-
-
-
-
-	<div class="cta-section p-4" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/fond_noir_1.jpg') no-repeat center / cover fixed;">
-		<div class="container p-4" data-aos="fade-up">
-			<div class="row text-center justify-content-center mb-5">
-				<div class="col-lg-7">
-					<h2 class="text-center text-white">Mes réalisations</h2>
-					<div class="mt-auto">
-						<Link :href="route('realisations')" class="btn btn-outline-light btn-block">
-							Découvrir toutes mes réalisations
-						</Link>
-	              	</div>
-				</div>
-			</div>
-<!-- :autoplay="2000" -->
-			<carousel
-			:touchDrag="false"
-			:breakpoints="{
-				700: {
-					itemsToShow: 1,
-					snapAlign: 'center',
-				},
-				1000: {
-					itemsToShow: 3,
-					snapAlign: 'start',
-				}
-			}"
-		    :wrap-around="true"  
-		    :transition="1500"
-		    :autoplay="10000"
-		    >
-				<slide v-for="site in carousel_sites" :key="site.id">
-					<div class="item">
-						<a class="media-thumb m-1" :href="base_url + '/images/hero-slider-2.jpg'" data-fancybox="gallery">
-							<div class="media-text text-left">
-								<h3>{{site.titre}}</h3>
-								<span class="location">Consulter</span>
-							</div>
-							<div :style="'background: linear-gradient(rgba(0, 0, 0, 0.8) 0%,rgba(0, 0, 0, 0.1) 50%,rgba(0, 0, 0, 0.0) 100%), url('+base_url + site.src+') no-repeat center / cover fixed;height: 400px;width: 300px'">
-
-							</div>
-							<!-- <img :src="base_url + site.src" alt="Image" class="img-fluid" /> -->
-						</a>
-					</div>
-				</slide>
-
-				<template #addons>
-					<navigation />
-					<div class="pt-50px">
-						<pagination class="pagintation-realisations" />
-					</div>
-				</template>
-			 </carousel>
-
-<!-- 			<div class="owl-carousel owl-3-slider">
-
-				<div class="item" v-for="site in carousel_sites">
-					<a class="media-thumb" :href="base_url + '/images/hero-slider-2.jpg'" data-fancybox="gallery">
-						<div class="media-text">
-							<h3>{{site.titre}}</h3>
-							<span class="location">Italy</span>
-						</div>
-						<img :src="base_url + '/images/site_kuntz_ramonage/site_kuntz_ramonage_1.JPG'" alt="Image" class="img-fluid">
-					</a> 
-				</div>
-
-				<div class="item">
-					<a class="media-thumb" :href="base_url + '/images/hero-slider-2.jpg'" data-fancybox="gallery">
-						<div class="media-text">
-							<h3>Oia</h3>
-							<span class="location">Greece</span>
-						</div>
-						<img :src="base_url + '/images/site_pole_gestion/site_pole_gestion_1.JPG'" alt="Image" class="img-fluid">
-					</a> 
-				</div>
-
-				<div class="item">
-					<a class="media-thumb" :href="base_url + '/images/hero-slider-3.jpg'" data-fancybox="gallery">
-						<div class="media-text">
-							<h3>Perhentian Islands</h3>
-							<span class="location">Malaysia</span>
-						</div>
-						<img :src="base_url + '/images/site_kuntz_ramonage/site_kuntz_ramonage_1.JPG'" alt="Image" class="img-fluid">
-					</a> 
-				</div>
-			</div> -->
-
-		</div>
-	</div>
-
-	<div class="untree_co-section testimonial-section" >
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-lg-7 text-center" data-aos="fade-up">
-					<h2 class="section-title text-center mb-5">Avis google</h2>
-
-					<carousel :items-to-show="1" :wrap-around="true"  :transition="1500" :autoplay="10000">
-						<slide v-for="avis in avis_googles" :key="avis.id">
-							<div class="item">
-								<div class="testimonial mx-auto">
-									<figure class="img-wrap">
-										<!-- <img :src="base_url + '/images/person_2.jpg'" alt="Image" class="img-fluid"> -->
-										<img :src="avis.avatar" alt="Image" class="img-fluid">
-									</figure>
-									<h3 class="name">{{avis.prenom}} {{avis.nom}}</h3>
-									<blockquote>
-										<p>&ldquo;{{avis.avis}}&rdquo;</p>
-									</blockquote>
 								</div>
-<!-- 								<a class="media-thumb m-1" :href="base_url + '/images/hero-slider-2.jpg'" data-fancybox="gallery">
-									<div class="media-text text-left">
-										<h3>{{site.titre}}</h3>
-										<span class="location">Consulter</span>
+							</slide>
+
+							
+								<template #addons >
+									<div class="pt-50px">
+										<pagination />
 									</div>
-									<img :src="base_url + site.src" alt="Image" class="img-fluid" />
-								</a> -->
-							</div>
-						</slide>
-
-						
-							<template #addons >
-								<div class="pt-50px">
-									<pagination />
-								</div>
-							</template>
-					 </carousel>
-<!-- 
-					<div class="owl-single owl-carousel no-nav">
-
-						<div class="testimonial mx-auto" v-for="avis in avis_googles">
-							<figure class="img-wrap">
-								<img :src="base_url + '/images/person_2.jpg'" alt="Image" class="img-fluid">
-							</figure>
-							<h3 class="name">Adam Aderson</h3>
-							<blockquote>
-								<p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-							</blockquote>
-						</div>
-
-						<div class="testimonial mx-auto">
-							<figure class="img-wrap">
-								<img :src="base_url + '/images/person_3.jpg'" alt="Image" class="img-fluid">
-							</figure>
-							<h3 class="name">Lukas Devlin</h3>
-							<blockquote>
-								<p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-							</blockquote>
-						</div>
-
-						<div class="testimonial mx-auto">
-							<figure class="img-wrap">
-								<img :src="base_url + '/images/person_4.jpg'" alt="Image" class="img-fluid">
-							</figure>
-							<h3 class="name">Kayla Bryant</h3>
-							<blockquote>
-								<p>&ldquo;There live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-							</blockquote>
-						</div>
-
-					</div> -->
-
+								</template>
+						 </carousel>
+					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-
-
-
+		</section>
 	</div>
 </template>
 

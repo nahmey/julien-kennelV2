@@ -13,17 +13,6 @@
 						</h1>
 					</div>
 				</div>
-<!-- 				<div class="col-lg-5 d-none d-sm-block">
-					<div class="slides">
-						<img 
-						v-for="(image, index) in images" 
-						:key="index"
-						:src="base_url + image.path"
-						:alt="image.alt"
-						:class="['img-fluid', { active: currentWordIndex === index }]"
-						/>
-					</div>
-				</div> -->
 			</div>
 		</div>
 	</div>

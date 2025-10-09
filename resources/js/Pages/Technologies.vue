@@ -25,7 +25,7 @@
 						<div class="col-6 col-md-4 mb-4" v-for="data in technologies">
 							<div class="card h-100 border-0 shadow-sm rounded-lg text-center p-4 transition-all hover-transform hover-shadow">
 								<div class="mb-2">
-									<img :src="base_url + data.src" alt="Image" class="img-fluid col-8">
+									<img :src="base_url + data.src" :alt="'Logo ' + data.nom" class="img-fluid col-8">
 								</div>
 								<p class="font-weight-bold mb-0">{{data.nom}}</p>
 							</div>
@@ -48,63 +48,6 @@
 				</div>
 			</div>
 		</div>
-
-<!-- 		<div class="untree_co-section" style="background: url('images/fond_noir_2.jpg') center/cover no-repeat fixed;">
-			<div class="container pt-4 pb-4 text-white">
-				<h2 class="mb-5">Langages de programmation</h2>
-				<div class="row">
-					<div class="row col-12 col-md-8">
-						<div class="col-6 col-md-3 mb-4" v-for="data in langages">
-							<div class="card h-100 border-0 shadow-sm rounded-lg text-center p-4 transition-all hover-transform hover-shadow">
-								<div class="mb-2">
-									<img :src="base_url + data.src" alt="Image" class="img-fluid col-8">
-								</div>
-								<p class="font-weight-bold mb-0 text-dark">{{data.nom}}</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
-
-<!-- 		<div class="untree_co-section bg-light">
-			<div class="container mt-5">
-				<h2 class="mb-5">Base de données et autre</h2>
-				<div class="row">
-					<div class="row col-12 col-md-6">
-						<div class="col-6 col-md-4 mb-4" v-for="data in bdds">
-							<div class="card h-100 border-0 shadow-sm rounded-lg text-center p-4 transition-all hover-transform hover-shadow">
-								<div class="mb-2">
-									<img :src="base_url + data.src" alt="Image" class="img-fluid col-8">
-								</div>
-								<p class="font-weight-bold mb-0">{{data.nom}}</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
-
-<!-- 		<div class="cta-section bg-light pt-4 pb-4">
-			<div class="container mt-5">
-				<h2 class="mb-5">Autres</h2>
-				<div class="row">
-					<div class="col-12 col-md-6 col-lg-3" v-for="data in cms">
-						<div class="media-1">
-							<a href="#" class="d-block mb-3">
-								<img :src="base_url + data.src" alt="Image" class="img-fluid">
-							</a>
-							<div class="d-flex">
-								<div>
-									<h3><a href="#" class="text-white">{{data.nom}}</a></h3>
-									<p>{{data.description}}</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
 	</div>
 </template>
 
