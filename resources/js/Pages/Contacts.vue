@@ -29,7 +29,7 @@
 				</div>
 				<div class="row align-items-stretch">
 					<div class="col-12 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-1 mb-4">
-						<div class="feature-1 d-md-flex mb-4 h-100">
+						<div class="feature-1 d-md-flex mb-4 h-100" @click.prevent="gotToUrlTel()">
 							<div class="align-self-center">
 								<svg xmlns="http://www.w3.org/2000/svg" 
 								width="24" height="24" viewBox="0 0 24 24" fill="none" 
@@ -50,7 +50,7 @@
 
 					<!-- Email -->
 					<div class="col-12 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-1 mb-4">
-						<div class="feature-1 d-md-flex mb-4 h-100" style="background: url('images/fond_noir_1.jpg') no-repeat center / cover;">
+						<div class="feature-1 d-md-flex mb-4 h-100" style="background: url('images/fond_noir_1.jpg') no-repeat center / cover;"  @click.prevent="gotToUrlEmail()">
 							<div class="align-self-center text-white">
 								<svg xmlns="http://www.w3.org/2000/svg" 
 								width="24" height="24" viewBox="0 0 24 24" fill="none" 
@@ -67,23 +67,23 @@
 
 					<!-- Adresse -->
 					<div class="col-12 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-1 mb-4">
-					<div class="feature-1 d-md-flex mb-4 h-100">
-					<div class="align-self-center">
-					<svg xmlns="http://www.w3.org/2000/svg" 
-					width="24" height="24" viewBox="0 0 24 24" fill="none" 
-					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
-					class="lucide map-pin mb-4">
-					<path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 0 1 18 0z"/>
-					<circle cx="12" cy="10" r="3"/>
-					</svg>
-					<h3>Adresse</h3>
-					<p class="mb-0">
-					3 Passage Achille Demange 67700 Saverne France
-					</p>
+						<div class="feature-1 d-md-flex mb-4 h-100">
+							<div class="align-self-center">
+								<svg xmlns="http://www.w3.org/2000/svg" 
+								width="24" height="24" viewBox="0 0 24 24" fill="none" 
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+								class="lucide map-pin mb-4">
+									<path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 0 1 18 0z"/>
+									<circle cx="12" cy="10" r="3"/>
+								</svg>
+								<h3>Adresse</h3>
+								<p class="mb-0">
+									3 Passage Achille Demange 67700 Saverne France
+								</p>
+							</div>
+						</div>
 					</div>
-					</div>
-					</div>
-					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -92,5 +92,13 @@
 <script setup>
 import { ref } from 'vue';
 import { Head, Link } from '@inertiajs/vue3';
+
+const gotToUrlTel = () => {
+	window.location.href = 'tel:+33674118211';
+};
+
+const gotToUrlEmail = () => {
+	window.location.href = 'mailto:kennel.julien@gmail.com';
+};
 
 </script>
