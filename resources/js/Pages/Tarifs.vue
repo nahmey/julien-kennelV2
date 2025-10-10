@@ -37,7 +37,7 @@
 									{{forfait.sous_titre}}
 								</p>
 								<div class="mb-4">
-									<span class="h2 font-weight-bold">A partir de {{forfait.prix}}€</span>
+									<span class="h2 font-weight-bold">À partir de {{forfait.prix}}€*</span>
 								</div>
 								<ul class="list-unstyled mb-5">
 									<li class="d-flex align-items-start mb-3" v-for="(contenu, titre) in forfait.contenus">
@@ -55,6 +55,10 @@
 							</div>
 						</div>
 					</div>
+				</div>
+
+				<div class="text-center">
+					*Chaque projet étant unique, un devis personnalisé est établi en fonction de vos besoins et des fonctionnalités souhaitées.
 				</div>
 			</div>
 		</section>
@@ -147,7 +151,7 @@ const forfaits = ref([
 		{ Contenu: 'Accueil, À propos, Services, Contact, Mentions légales' },
 		{ Technos: 'Laravel + Vue 3' },
 		{ Responsive: 'Oui (mobile/tablette/desktop)' },
-		{ Sécurité: 'Base Laravel (CSRF, validation, etc.)' },
+		// { Sécurité: 'Base Laravel (CSRF, validation, etc.)' },
 		{ Hébergement: 'Non inclus' },
 		{ 'Durée estimée': '~15 heures' },
 	]
@@ -173,7 +177,7 @@ id: 2,
 	contenus: [
 		{ Contenu: 'Jusqu’à 10 pages' },
 		{ Admin: 'Module actualités/blog (CRUD avec upload d’image)' },
-		{ Sécurité : 'Authentification / rôles' },
+		{ Sécurité : 'Authentification' },
 		{ Technos : 'Laravel API + Vue 3 admin-panel' },
 		{ 'Durée estimée': '~35 heures' },
 	]
@@ -188,12 +192,11 @@ id: 2,
 		{ Contenu: ' Jusqu’à 15 pages + modules dynamiques' },
 		{ Admin: 'Actualités, galerie, témoignages, carte interactive, utilisateurs, filtres, statistiques…' },
 		{ Sécurité : 'Auth avec rôles, validation, permissions' },
-		{ Technos : 'Laravel backend + Vue 3 SPA ou Inertia' },
+		// { Technos : 'Laravel backend + Vue 3 SPA ou Inertia' },
 		{ Cartographie  : 'VueLeaflet + données PostgreSQL (PostGIS)' },
-		{ 'Durée estimée': '~35 heures' },
+		{ 'Durée estimée': '~50 heures' },
 	]
 }
-
 ])
 
 

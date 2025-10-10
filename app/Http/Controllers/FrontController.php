@@ -251,7 +251,7 @@ class FrontController extends Controller
                 "src" => "/images/realisations/gorna.png",
                 "titre" => "Gorna",
                 "sous_titre" => "sous_titre",
-                "lien" => "lien"
+                "lien" => "https://gorna.fr/"
             ],
             [
                 'id'=> 2,
@@ -265,21 +265,21 @@ class FrontController extends Controller
                 "src" => "/images/site_cenl/site_cenl_1.JPG",
                 "titre" => "Site internet du CEN Lorraine",
                 "sous_titre" => "sous_titre",
-                "lien" => "lien"
+                "lien" => "https://www.cen-lorraine.fr/"
             ],
             [
                 "id" => 4,
                 "src" => "/images/site_kuntz_ramonage/site_kuntz_ramonage_1.JPG",
                 "titre" => "Site internet Kuntz Ramonage",
                 "sous_titre" => "sous_titre",
-                "lien" => "lien"
+                "lien" => "https://kuntz-ramonage.fr/"
             ],
             [
                 "id" => 5,
                 "src" => "/images/site_pram/1.JPG",
                 "titre" => "Site internet du PRAM",
                 "sous_titre" => "sous_titre",
-                "lien" => "lien"
+                "lien" => "https://app.pram-grandest.fr/"
             ],
         ];
 

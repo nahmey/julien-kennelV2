@@ -9,7 +9,7 @@
 				<div class="row mb-5 justify-content-center">
 					<div class="col-lg-6 text-center">
 						<h2 class="section-title text-center mb-3">Mes Services</h2>
-						<p class="lead">Développeur Web depuis plus de 6 ans, je réalise pour vous des applications métier et sites internet sur mesure selon vos besoins.</p>
+						<p class="lead">Développeur Web depuis plus de 6 ans, je réalise pour vous des logiciels métier et sites internet sur mesure selon vos besoins.</p>
 						<div class="mt-auto">
 							<Link :href="route('a-propos')" class="btn btn-dark btn-block">
 								En découvrir plus sur moi
@@ -17,7 +17,7 @@
 		              	</div>
 					</div>
 				</div>
-				<div class="row align-items-stretch pt-4">
+				<div class="d-flex flex-wrap align-items-stretch pt-4">
 					<div class="col-lg-4 order-lg-1" data-aos="fade-up">
 						<div class="h-100">
 							<div class="frame h-100">
@@ -28,11 +28,11 @@
 					</div>
 
 					<div class="col-12 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-1" >
-						<div class="feature-1 d-md-flex" v-for="service in services_col_1" data-aos="fade-up">
+						<div class="feature-1 d-md-flex" v-for="(service, key) in services_col_1" :style="{background: key === 1 ? 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(\'images/fond_noir_1.jpg\') no-repeat center / cover' : ''}" data-aos="fade-up">
 							<div class="align-self-center">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" :class="service.icone + ' lucide mb-4'"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
-								<h3>{{service.titre}}</h3>
-								<p class="mb-0">{{service.description}}</p>
+								<component :is="getIconComponent(service.icon)" :class="key === 1 ? 'text-white mb-4' : 'mb-4'"/>
+								<h3 :class="key === 1 ? 'text-light' : ''">{{service.titre}}</h3>
+								<p :class="key === 1 ? 'text-light mb-0' : 'mb-0'">{{service.description}}</p>
 							</div>
 						</div>
 					</div>
@@ -40,7 +40,7 @@
 					<div class="col-12 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-3 mt-4 mt-md-0" >
 						<div class="feature-1 d-md-flex" v-for="(service, key) in services_col_2" :style="{background: key === 0 ? 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(\'images/fond_noir_1.jpg\') no-repeat center / cover' : ''}" data-aos="fade-up">
 							<div class="align-self-center">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" :class="key === 0 ? service.icone + ' lucide mb-4 text-light' : service.icone + ' lucide mb-4'"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+								<component :is="getIconComponent(service.icon)" :class="key === 0 ? 'text-white mb-4' : 'mb-4'"/>
 								<h3 :class="key === 0 ? 'text-light' : ''">{{service.titre}}</h3>
 								<p :class="key === 0 ? 'text-light mb-0' : 'mb-0'">{{service.description}}</p>
 							</div>
@@ -125,7 +125,7 @@
 			    >
 					<slide v-for="site in carousel_sites" :key="site.id">
 						<div class="item">
-							<a class="media-thumb m-1" :href="base_url + '/images/hero-slider-2.jpg'" data-fancybox="gallery">
+							<a class="media-thumb m-1" :href="site.lien" target="_blank" data-fancybox="gallery">
 								<div class="media-text text-left">
 									<h3>{{site.titre}}</h3>
 									<span class="location">Consulter</span>
@@ -185,6 +185,7 @@
 <script setup>
 import { ref, inject, onMounted } from 'vue';
 import { Head, Link } from '@inertiajs/vue3';
+import { Globe, LayoutDashboard, Database, Server } from 'lucide-vue-next';
 
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
@@ -197,25 +198,42 @@ const carousel_sites = ref([]);
 const avis_googles = ref([]);
 
 const services_col_1 = [
-		{
-			titre: 'Applications Web logiciels métier',
-			description: 'Je développe pour vous des logiciels métiers sur mesure, en fonction de vos besoins, afin de répondre à vos problématiques.',
-			icon: 'lucide-layout-grid'
-		},
-		{
-			titre: 'Bases de données',
-			description: 'Vous avez besoin de concevoir ou gérer votre base de données ? Mon expérience en SQL sont là pour y répondre.',
-			icon: 'lucide-database'
-		}
-	]
+	{
+		titre: 'Applications Web logiciels métier',
+		description: 'Je développe pour vous des logiciels métiers sur mesure, en fonction de vos besoins, afin de répondre à vos problématiques.',
+		icon: 'LayoutDashboard'
+	},
+	{
+		titre: 'Bases de données',
+		description: 'Vous avez besoin de concevoir ou gérer votre base de données ? Mon expérience en SQL sont là pour y répondre.',
+		icon: 'Database'
+	}
+]
 
-	const services_col_2 = [
-		{
-			titre: 'Sites internet',
-			description: "Besoin de créer un site internet rapide, éfficace et moderne pour montrer votre visibilité ? Je suis là pour vous apporter toute mon expérience.",
-			icon: 'lucide-panels-top-left'
-		},
-	]
+const services_col_2 = [
+	{
+		titre: 'Sites internet',
+		description: "Besoin de créer un site internet rapide, éfficace et moderne pour montrer votre visibilité ? Je suis là pour vous apporter toute mon expérience.",
+		icon: 'Globe'
+	},
+	{
+		titre: 'Hébergement',
+		description: "J’héberge vos sites et applications sur des serveurs rapides et sécurisés, afin de garantir stabilité, performance et tranquillité d’esprit.",
+		icon: 'Server'
+	}
+]
+
+const getIconComponent = (iconName) =>
+{
+    const iconMap = {
+        Globe: Globe,
+        LayoutDashboard: LayoutDashboard,
+        Database: Database,
+        Server: Server,
+    };
+
+    return iconMap[iconName];
+}
 
 const loadData = () => 
 {

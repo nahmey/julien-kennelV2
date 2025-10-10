@@ -15,7 +15,7 @@
 
         <meta property="og:locale" content="fr_FR">
         <meta property="og:type" content="website">
-        <meta property="og:title" content="Julien Kennel, développeur web à Saverne dans le Bas-Rhin">
+        <meta property="og:title" content="Julien Kennel | Développeur web à Saverne | Création de site internet">
         <meta property="og:site_name" content="Julien Kennel">
         <meta property="og:url" content="https://julien-kennel.fr">
         <meta property="og:description" content="Julien Kennel, développeur web, création de site internet, développement d'applications métiers, logiciels sur mesure, applications web, Saverne, Strasbourg, Bas-Rhin">
@@ -25,13 +25,13 @@
         <link href="{{asset('css/nunito.css')}}" rel="stylesheet">
         <link rel="stylesheet" href="{{asset('fonts/icomoon/style.css')}}">
 
-        <link rel="preload" href="{{asset('images/fond_noir_1.jpg')}}" as="image">
-        <link rel="preload" href="{{asset('images/fond_noir_2.jpg')}}" as="image">
-
         @routes
         @vite(['resources/js/app.js'])
         @inertiaHead
 
+        <!-- <link rel="preload" href="{{ Vite::asset('resources/js/app.js') }}" as="script"> -->
+        <link rel="preload" href="{{asset('images/fond_noir_1.jpg')}}" as="image">
+        <link rel="preload" href="{{asset('images/fond_noir_2.jpg')}}" as="image">
     </head>
     
     <body>
