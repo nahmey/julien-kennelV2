@@ -84,7 +84,7 @@
 			        <!-- Compteur 3 -->
 			        <Counter
 			          title="Années d'expériences"
-			          :number="6"
+			          :number="8"
 			          suffix="+"
 			          colorClass="bg-vert-fonce"
 			          :duration="2000"

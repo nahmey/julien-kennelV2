@@ -98,6 +98,22 @@ class FrontController extends Controller
                 'image' => 'images/realisations/ajs.png',
                 'description' => "Site Web pour l'association des jeunes séniors de Saverne",
                 'type' => 'site'
+            ],
+            [
+                'id' => 16,
+                'nom' => 'CSI Saverne',
+                'url' => 'https://csi-saverne.fr/',
+                'image' => 'images/realisations/csi_saverne.png',
+                'description' => "Site Web pour le centre de soins infirmiers de Saverne & environs",
+                'type' => 'site'
+            ],
+            [
+                'id' => 17,
+                'nom' => 'ECOLOR',
+                'url' => 'https://be-ecolor.fr/',
+                'image' => 'images/realisations/ecolor.png',
+                'description' => "Site Web pour le bureau d'étude ECOLOR",
+                'type' => 'site'
             ]
         ];
 
